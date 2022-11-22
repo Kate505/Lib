@@ -12,18 +12,18 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
   <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Custom styles for this template -->
-    <link href="css\dashboard.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css\dashboard.css" rel="stylesheet">
 </head>
 
 <body>
-  
+
   <header class="navbar navbar-dark bg-dark navbar-expand-lg bd-navbar sticky-top">
     <nav class="container-xxl bd-gutter flex-wrap flex-md-nowrap" aria-label="Main navigation">
       <div class="bd-navbar-toggle">
 
-        <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
-          aria-controls="offcanvasDarkNavbar" aria-label="Toggle docs navigation">
+        <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle docs navigation">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi" fill="currentColor"
             viewBox="0 0 16 16">
             <path fill-rule="evenodd"
@@ -35,34 +35,19 @@
         </button>
       </div>
 
-      <a class="navbar-brand p-0 me-0 me-lg-2" href="/" aria-label="Bootstrap">
-        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="32" class="d-block my-1" viewBox="0 0 118 94"
-          role="img">
-          <title>Bootstrap</title>
-          <path fill-rule="evenodd" clip-rule="evenodd"
-            d="M24.509 0c-6.733 0-11.715 5.893-11.492 12.284.214 6.14-.064 14.092-2.066 20.577C8.943 39.365 5.547 43.485 0 44.014v5.972c5.547.529 8.943 4.649 10.951 11.153 2.002 6.485 2.28 14.437 2.066 20.577C12.794 88.106 17.776 94 24.51 94H93.5c6.733 0 11.714-5.893 11.491-12.284-.214-6.14.064-14.092 2.066-20.577 2.009-6.504 5.396-10.624 10.943-11.153v-5.972c-5.547-.529-8.934-4.649-10.943-11.153-2.002-6.484-2.28-14.437-2.066-20.577C105.214 5.894 100.233 0 93.5 0H24.508zM80 57.863C80 66.663 73.436 72 62.543 72H44a2 2 0 01-2-2V24a2 2 0 012-2h18.437c9.083 0 15.044 4.92 15.044 12.474 0 5.302-4.01 10.049-9.119 10.88v.277C75.317 46.394 80 51.21 80 57.863zM60.521 28.34H49.948v14.934h8.905c6.884 0 10.68-2.772 10.68-7.727 0-4.643-3.264-7.207-9.012-7.207zM49.948 49.2v16.458H60.91c7.167 0 10.964-2.876 10.964-8.281 0-5.406-3.903-8.178-11.425-8.178H49.948z"
-            fill="currentColor"></path>
-        </svg>
+      <a class="navbar-brand p-0 me-0 me-lg-2 bg-dark" href="/">
+        <img src="img\inicialesWhite.png" class="d-inline-block align-text-top ms-5 me-3"
+          style="width: 3rem; height: 3rem;">
       </a>
 
-      <div class="d-flex">
+      <div class="d-flex"></div>
 
-        <button class="navbar-toggler d-flex d-lg-none order-3 p-2" type="button" data-bs-toggle="offcanvas"
-          data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-label="Toggle navigation">
-
-        </button>
-      </div>
 
       <div class="offcanvas-lg offcanvas-end flex-grow-1" tabindex="-1" id="bdNavbar"
         aria-labelledby="bdNavbarOffcanvasLabel" data-bs-scroll="true">
-        <div class="offcanvas-header px-4 pb-0">
-          <h5 class="offcanvas-title text-white" id="bdNavbarOffcanvasLabel">Bootstrap</h5>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"
-            data-bs-target="#bdNavbar"></button>
-        </div>
 
-        <div class="offcanvas-body p-4 pt-0 p-lg-0">
-          <h3 class="text-white">Hola</h3>
+        <div class="offcanvas-body px-4 pt-5 p-lg-0">
+          <h3 class="text-white"> Sistema de Control de Ventas e Inventario</h3>
         </div>
       </div>
     </nav>
@@ -70,9 +55,13 @@
 
   <div class="container-fluid">
     <div class="row">
-      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-lg-block bg-light sidebar collapse">
+      <nav id="sidebarMenu" class="col-3 d-lg-block bg-light sidebar collapse">
         <div class="position-sticky pt-3 sidebar-sticky">
-          <ul class="nav flex-column">
+          <!--
+          <div class="text-center">
+            <img class="img-fluid" style="width: 60%;" src="img\Logotipo.png">
+          </div>-->
+          <ul class="nav ps-3 pt-4 flex-column">
             <li class="nav-item">
               <a class="nav-link p-2" aria-current="page" href="index.html"><img style="margin-right: 1rem;"
                   src="assets/house-fill.svg">Inicio</a>
@@ -82,8 +71,10 @@
                   src="assets\pencil-square.svg">Catálogo de Productos</a>
             </li>
             <li class="mb-1">
-              <a class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
-                <img style="margin-right: 1rem;" src="assets\journal-text.svg">Inventario <img src="assets\bx-chevron-down.svg" class="btn-toggle-L">
+              <a class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                <img style="margin-right: 1rem;" src="assets\journal-text.svg">Inventario <img
+                  src="assets\bx-chevron-down.svg" class="btn-toggle-L">
               </a>
               <div class="collapse" id="home-collapse">
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
@@ -96,7 +87,7 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false"><img style="margin-right: 1rem;" src="assets\journal-text.svg">Inventario</a>
-              <ul class="dropdown-menu dropdown-menu-dark">
+              <ul class="dropdown-menu dropdown-menu">
                 <li><a class="dropdown-item ps-4" href="inventarioAdd.html"><img style="margin-right: 1rem;"
                       src="assets\plus-circle-fill.svg">Agregar</a></li>
                 <li><a class="dropdown-item ps-4" href="inventarioUpdate.html"><img style="margin-right: 1rem;"
@@ -112,7 +103,7 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false"><img style="margin-right: 1rem;" src="assets\cash-coin.svg">Ventas</a>
-              <ul class="dropdown-menu dropdown-menu-dark">
+              <ul class="dropdown-menu dropdown-menu">
                 <li><a class="dropdown-item ps-4" href="ventasAdd.html"><img style="margin-right: 1rem;"
                       src="assets\plus-circle-fill.svg">Agregar</a></li>
                 <li><a class="dropdown-item ps-4" href="ventasUpdate.html"><img style="margin-right: 1rem;"
@@ -128,7 +119,7 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false"><img style="margin-right: 1rem;" src="assets\cash-stack.svg">Abonos</a>
-              <ul class="dropdown-menu dropdown-menu-dark">
+              <ul class="dropdown-menu dropdown-menu">
                 <li><a class="dropdown-item ps-4" href="abonoAdd.html"><img style="margin-right: 1rem;"
                       src="assets\plus-circle-fill.svg">Agregar</a></li>
                 <li><a class="dropdown-item ps-4" href="abonoUpdate.html"><img style="margin-right: 1rem;"
@@ -144,7 +135,7 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false"><img style="margin-right: 1rem;" src="assets\people.svg">Clientes</a>
-              <ul class="dropdown-menu dropdown-menu-dark">
+              <ul class="dropdown-menu dropdown-menu">
                 <li><a class="dropdown-item ps-4" href="clientesAdd.html"><img style="margin-right: 1rem;"
                       src="assets\plus-circle-fill.svg">Agregar</a></li>
                 <li><a class="dropdown-item ps-4" href="clientesUpdate.html"><img style="margin-right: 1rem;"
@@ -160,7 +151,7 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false"><img style="margin-right: 1rem;" src="assets\bxs-report.svg">Reportes</a>
-              <ul class="dropdown-menu dropdown-menu-dark">
+              <ul class="dropdown-menu dropdown-menu">
                 <li><a class="dropdown-item ps-4" href="ventasDia.html"><img style="margin-right: 1rem;"
                       src="assets\arrow-right-short.svg">Ventas Diarias</a></li>
                 <li><a class="dropdown-item ps-4" href="ventasMes.html"><img style="margin-right: 1rem;"
@@ -175,7 +166,7 @@
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false"><img style="margin-right: 1rem;" src="assets\bxs-id-card.svg">Empleados</a>
-              <ul class="dropdown-menu dropdown-menu-dark">
+              <ul class="dropdown-menu dropdown-menu">
                 <li><a class="dropdown-item ps-4" href="empleadoAdd.html"><img style="margin-right: 1rem;"
                       src="assets\plus-circle-fill.svg">Agregar</a></li>
                 <li><a class="dropdown-item ps-4" href="empleadoUpdate.html"><img style="margin-right: 1rem;"
@@ -190,8 +181,9 @@
 
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false"><img style="margin-right: 1rem;" src="assets\journal-bookmark-fill.svg">Sistema de Apartado</a>
-              <ul class="dropdown-menu dropdown-menu-dark">
+                aria-expanded="false"><img style="margin-right: 1rem;" src="assets\journal-bookmark-fill.svg">Sistema de
+                Apartado</a>
+              <ul class="dropdown-menu dropdown-menu">
                 <li><a class="dropdown-item ps-4" href="reservaAdd.html"><img style="margin-right: 1rem;"
                       src="assets\plus-circle-fill.svg">Agregar</a></li>
                 <li><a class="dropdown-item ps-4" href="reservaUpdate.html"><img style="margin-right: 1rem;"
@@ -212,8 +204,9 @@
         </div>
       </nav>
 
-      <main class="ms-sm-auto col-lg-10 px-md-4">
-        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+      <main class="ms-sm-auto col-lg-9 px-md-4">
+        <div
+          class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
           <h1 class="h2">Librería Pequeños Detalles</h1>
         </div>
 
@@ -223,12 +216,15 @@
   </div>
 
 
-        <div class="offcanvas offcanvas-start text-bg-dark" data-bs-scroll="true" tabindex="-1" id="offcanvasDarkNavbar"
+
+
+
+      <div class="navbar container-md justify-content-start">
+
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasDarkNavbar"
           aria-labelledby="offcanvasDarkNavbarLabel">
-          <div class="offcanvas-header p-5">
-            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Libreria Pequeños Detalles</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-              aria-label="Close"></button>
+          <div class="offcanvas-header">
+            <img style="width: 18rem; height: 13rem;" src="img\Logotipo.png">
           </div>
 
           <div class="offcanvas-body">
@@ -244,7 +240,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
                   aria-expanded="false"><img style="margin-right: 1rem;" src="assets\journal-text.svg">Inventario</a>
-                <ul class="dropdown-menu dropdown-menu-dark">
+                <ul class="dropdown-menu dropdown-menu">
                   <li><a class="dropdown-item ps-4" href="inventarioAdd.html"><img style="margin-right: 1rem;"
                         src="assets\plus-circle-fill.svg">Agregar</a></li>
                   <li><a class="dropdown-item ps-4" href="inventarioUpdate.html"><img style="margin-right: 1rem;"
@@ -260,7 +256,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
                   aria-expanded="false"><img style="margin-right: 1rem;" src="assets\cash-coin.svg">Ventas</a>
-                <ul class="dropdown-menu dropdown-menu-dark">
+                <ul class="dropdown-menu dropdown-menu">
                   <li><a class="dropdown-item ps-4" href="ventasAdd.html"><img style="margin-right: 1rem;"
                         src="assets\plus-circle-fill.svg">Agregar</a></li>
                   <li><a class="dropdown-item ps-4" href="ventasUpdate.html"><img style="margin-right: 1rem;"
@@ -276,7 +272,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
                   aria-expanded="false"><img style="margin-right: 1rem;" src="assets\cash-stack.svg">Abonos</a>
-                <ul class="dropdown-menu dropdown-menu-dark">
+                <ul class="dropdown-menu dropdown-menu">
                   <li><a class="dropdown-item ps-4" href="abonoAdd.html"><img style="margin-right: 1rem;"
                         src="assets\plus-circle-fill.svg">Agregar</a></li>
                   <li><a class="dropdown-item ps-4" href="abonoUpdate.html"><img style="margin-right: 1rem;"
@@ -292,7 +288,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
                   aria-expanded="false"><img style="margin-right: 1rem;" src="assets\people.svg">Clientes</a>
-                <ul class="dropdown-menu dropdown-menu-dark">
+                <ul class="dropdown-menu dropdown-menu">
                   <li><a class="dropdown-item ps-4" href="clientesAdd.html"><img style="margin-right: 1rem;"
                         src="assets\plus-circle-fill.svg">Agregar</a></li>
                   <li><a class="dropdown-item ps-4" href="clientesUpdate.html"><img style="margin-right: 1rem;"
@@ -308,7 +304,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
                   aria-expanded="false"><img style="margin-right: 1rem;" src="assets\bxs-report.svg">Reportes</a>
-                <ul class="dropdown-menu dropdown-menu-dark">
+                <ul class="dropdown-menu dropdown-menu">
                   <li><a class="dropdown-item ps-4" href="ventasDia.html"><img style="margin-right: 1rem;"
                         src="assets\arrow-right-short.svg">Ventas Diarias</a></li>
                   <li><a class="dropdown-item ps-4" href="ventasMes.html"><img style="margin-right: 1rem;"
@@ -323,7 +319,7 @@
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
                   aria-expanded="false"><img style="margin-right: 1rem;" src="assets\bxs-id-card.svg">Empleados</a>
-                <ul class="dropdown-menu dropdown-menu-dark">
+                <ul class="dropdown-menu dropdown-menu">
                   <li><a class="dropdown-item ps-4" href="empleadoAdd.html"><img style="margin-right: 1rem;"
                         src="assets\plus-circle-fill.svg">Agregar</a></li>
                   <li><a class="dropdown-item ps-4" href="empleadoUpdate.html"><img style="margin-right: 1rem;"
@@ -338,8 +334,9 @@
 
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false"><img style="margin-right: 1rem;" src="assets\journal-bookmark-fill.svg">Sistema de Apartado</a>
-                <ul class="dropdown-menu dropdown-menu-dark">
+                  aria-expanded="false"><img style="margin-right: 1rem;" src="assets\journal-bookmark-fill.svg">Sistema
+                  de Apartado</a>
+                <ul class="dropdown-menu dropdown-menu">
                   <li><a class="dropdown-item ps-4" href="reservaAdd.html"><img style="margin-right: 1rem;"
                         src="assets\plus-circle-fill.svg">Agregar</a></li>
                   <li><a class="dropdown-item ps-4" href="reservaUpdate.html"><img style="margin-right: 1rem;"
@@ -359,8 +356,10 @@
             </ul>
           </div>
         </div>
+      </div>
+    </nav>
 
-  
+
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -368,7 +367,7 @@
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
     crossorigin="anonymous"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
     integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
     crossorigin="anonymous"></script>
   <script src="JavaScript\dashboard.js"></script>
@@ -379,8 +378,11 @@
   <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
     <p class="col-md-4 mb-0 text-muted">&copy; 2022 Company, Inc</p>
 
-    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+    <a href="/"
+      class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+      <svg class="bi me-2" width="40" height="32">
+        <use xlink:href="#bootstrap" />
+      </svg>
     </a>
 
     <ul class="nav col-md-4 justify-content-end">
