@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;700&display=swap');
+
+
+a {
+  
+  font-family: 'Comfortaa', cursive;
+  font-size: medium;
+  /*-webkit-transition: .3s all ease;
+  -o-transition: .3s all ease;
+  transition: .3s all ease;*/
+  /*text-decoration: none !important;*/
+}
+
+.cuerpo{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+
+.boton{
+  background-color:transparent !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) !important;
+  color: white !important;
+}
+
+.boton:hover{
+  background-color:transparent !important;
+  color: white !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)) !important;
+}
+
+h1 {
+  padding: 2.5rem;
+}
+
+div {
+  font-family: 'Comfortaa', cursive;
+  font-size: medium;
+}
+
+.footer-48201 {
+  padding: 2rem 0;
+  background-color: #000;
+  color: #DFFF00;  
+}
+
+.footer-48201 .footer-site-logo {
+  font-size: 1.5rem;
+  color: #DFFF00;  
+}
+
+.footer-48201 .nav-links li {
+  margin-bottom: 0.625rem;
+}
+
+.footer-48201 .nav-links li a {
+  color: #DFFF00;  
+}
+
+.footer-48201 .nav-links li a:hover {
+  color: gray;
+}
+
+.footer-48201 .btn.btn-tertiary {
+  background-color: #e42c64;
+  color: #fff;
+  border-radius: 1.875rem;
+  border: none;
+  padding: 0.625rem 1.25rem;
+}
+
+.footer-48201 .social li {
+  display: inline-block;
+}
+
+.footer-48201 .social li a {  
+  color: #DFFF00;
+  padding: 0.438rem;
+}
+
+.footer-48201 .social li a:hover {
+  color: gray;
+}
+
+.footer-48201 .copyright {
+  border-top: 0.063rem solid #404040;
+}
