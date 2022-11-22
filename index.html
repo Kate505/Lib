@@ -12,72 +12,18 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
   <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-
-      .b-example-divider {
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
-
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
-
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
-
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
-
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-    </style>
-
-    
     <!-- Custom styles for this template -->
     <link href="css\dashboard.css" rel="stylesheet">
 </head>
 
 <body>
   
-  <header class="navbar navbar-dark bg-dark navbar-expand-lg bd-navbar sticky-top">
-    <nav class="container-xxl bd-gutter flex-wrap flex-lg-nowrap" aria-label="Main navigation">
+  <header class="navbar navbar-dark bg-dark navbar-expand-md bd-navbar sticky-top">
+    <nav class="container-xxl bd-gutter flex-wrap flex-md-nowrap" aria-label="Main navigation">
       <div class="bd-navbar-toggle">
-        <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdSidebar"
-          aria-controls="bdSidebar" aria-label="Toggle docs navigation">
+
+        <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar" aria-label="Toggle docs navigation">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi" fill="currentColor"
             viewBox="0 0 16 16">
             <path fill-rule="evenodd"
@@ -124,17 +70,31 @@
 
   <div class="container-fluid">
     <div class="row">
-      <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <nav id="sidebarMenu" class="col-md-5 col-lg-2 d-md-block bg-light sidebar collapse">
         <div class="position-sticky pt-3 sidebar-sticky">
-          <ul class="nav flex-column">
-            <li class="nav-item">
+          <ul class="nav d-flex-column">
+            <li class="mb-1">
               <a class="nav-link p-2" aria-current="page" href="index.html"><img style="margin-right: 1rem;"
                   src="assets/house-fill.svg">Inicio</a>
             </li>
-            <li class="nav-item">
+            <li class="mb-1">
               <a class="nav-link p-2" href="catalogo.html"><img style="margin-right: 1rem;"
                   src="assets\pencil-square.svg">Catálogo de Productos</a>
             </li>
+
+            <li class="mb-1">
+              <a class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed" data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                <img style="margin-right: 1rem;" src="assets\journal-text.svg">Inventario <img src="assets\bx-chevron-down.svg" class="btn-toggle-L">
+              </a>
+              <div class="collapse" id="home-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Overview</a></li>
+                  <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Updates</a></li>
+                  <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Reports</a></li>
+                </ul>
+              </div>
+            </li>
+            
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false"><img style="margin-right: 1rem;" src="assets\journal-text.svg">Inventario</a>
@@ -230,7 +190,7 @@
               </ul>
             </li>
 
-            <li class="nav-item dropdown">
+            <li class="mb-1 nav-item dropdown">
               <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
                 aria-expanded="false"><img style="margin-right: 1rem;" src="assets\journal-bookmark-fill.svg">Sistema de Apartado</a>
               <ul class="dropdown-menu dropdown-menu-dark">
@@ -261,237 +221,11 @@
         </div>
 
         <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
-      
-          <script>
-            var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
-            var yValues = [55, 49, 44, 24, 15];
-            var barColors = [
-              "#b91d47",
-              "#00aba9",
-              "#2b5797",
-              "#e8c3b9",
-              "#1e7145"
-            ];
-      
-            new Chart("myChart", {
-              type: "doughnut",
-              data: {
-                labels: xValues,
-                datasets: [{
-                  backgroundColor: barColors,
-                  data: yValues
-                }]
-              },
-              options: {
-                title: {
-                  display: true,
-                  text: "World Wide Wine Production 2018"
-                }
-              }
-            });
-          </script>
-
       </main>
     </div>
   </div>
-  <!--
-
-  <div class="container-xxl bd-gutter mt-3 my-md-4 bd-layout" style="display: grid;">
-    <aside class="bd-sidebar">
-      <div class="offcanvas-lg offcanvas-start" tabindex="-1" id="bdSidebar" aria-labelledby="bdSidebarOffcanvasLabel">
-        <div class="offcanvas-header border-bottom">
-          <h5 class="offcanvas-title" id="bdSidebarOffcanvasLabel">Browse docs</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"
-            data-bs-target="#bdSidebar"></button>
-        </div>
-
-        <div class="offcanvas-body">
-          <nav class="bd-links w-100" id="bd-docs-nav" aria-label="Docs navigation">
-            <ul class="navbar-nav justify-content-end pe-3">
-              <li class="nav-item">
-                <a class="nav-link p-2" aria-current="page" href="index.html"><img style="margin-right: 1rem;"
-                    src="assets/house-fill.svg">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link p-2" href="catalogo.html"><img style="margin-right: 1rem;"
-                    src="assets\pencil-square.svg">Catálogo de Productos</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false"><img style="margin-right: 1rem;" src="assets\journal-text.svg">Inventario</a>
-                <ul class="dropdown-menu dropdown-menu-dark">
-                  <li><a class="dropdown-item ps-4" href="inventarioAdd.html"><img style="margin-right: 1rem;"
-                        src="assets\plus-circle-fill.svg">Agregar</a></li>
-                  <li><a class="dropdown-item ps-4" href="inventarioUpdate.html"><img style="margin-right: 1rem;"
-                        src="assets\arrow-clockwise.svg">Modificar</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item ps-4" href="inventarioDelete.html"><img style="margin-right: 1rem;"
-                        src="assets\trash3-fill.svg">Eliminar</a></li>
-                </ul>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false"><img style="margin-right: 1rem;" src="assets\cash-coin.svg">Ventas</a>
-                <ul class="dropdown-menu dropdown-menu-dark">
-                  <li><a class="dropdown-item ps-4" href="ventasAdd.html"><img style="margin-right: 1rem;"
-                        src="assets\plus-circle-fill.svg">Agregar</a></li>
-                  <li><a class="dropdown-item ps-4" href="ventasUpdate.html"><img style="margin-right: 1rem;"
-                        src="assets\arrow-clockwise.svg">Modificar</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item ps-4" href="ventasDelete.html"><img style="margin-right: 1rem;"
-                        src="assets\trash3-fill.svg">Eliminar</a></li>
-                </ul>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false"><img style="margin-right: 1rem;" src="assets\cash-stack.svg">Abonos</a>
-                <ul class="dropdown-menu dropdown-menu-dark">
-                  <li><a class="dropdown-item ps-4" href="abonoAdd.html"><img style="margin-right: 1rem;"
-                        src="assets\plus-circle-fill.svg">Agregar</a></li>
-                  <li><a class="dropdown-item ps-4" href="abonoUpdate.html"><img style="margin-right: 1rem;"
-                        src="assets\arrow-clockwise.svg">Modificar</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item ps-4" href="abonoDelete.html"><img style="margin-right: 1rem;"
-                        src="assets\trash3-fill.svg">Eliminar</a></li>
-                </ul>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false"><img style="margin-right: 1rem;" src="assets\people.svg">Clientes</a>
-                <ul class="dropdown-menu dropdown-menu-dark">
-                  <li><a class="dropdown-item ps-4" href="clientesAdd.html"><img style="margin-right: 1rem;"
-                        src="assets\plus-circle-fill.svg">Agregar</a></li>
-                  <li><a class="dropdown-item ps-4" href="clientesUpdate.html"><img style="margin-right: 1rem;"
-                        src="assets\arrow-clockwise.svg">Modificar</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item ps-4" href="clientesDelete.html"><img style="margin-right: 1rem;"
-                        src="assets\trash3-fill.svg">Eliminar</a></li>
-                </ul>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false"><img style="margin-right: 1rem;" src="assets\bxs-report.svg">Reportes</a>
-                <ul class="dropdown-menu dropdown-menu-dark">
-                  <li><a class="dropdown-item ps-4" href="ventasDia.html"><img style="margin-right: 1rem;"
-                        src="assets\arrow-right-short.svg">Ventas Diarias</a></li>
-                  <li><a class="dropdown-item ps-4" href="ventasMes.html"><img style="margin-right: 1rem;"
-                        src="assets\arrow-right-short.svg">Ventas Mensuales</a></li>
-                  <li><a class="dropdown-item ps-4" href="gananciasDiarias.html"><img style="margin-right: 1rem;"
-                        src="assets\arrow-right-short.svg">Ganancias Diarias</a></li>
-                  <li><a class="dropdown-item ps-4" href="gananciasMes.html"><img style="margin-right: 1rem;"
-                        src="assets\arrow-right-short.svg">Ganancias Mensuales</a></li>
-                </ul>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false"><img style="margin-right: 1rem;" src="assets\bxs-id-card.svg">Empleados</a>
-                <ul class="dropdown-menu dropdown-menu-dark">
-                  <li><a class="dropdown-item ps-4" href="empleadoAdd.html"><img style="margin-right: 1rem;"
-                        src="assets\plus-circle-fill.svg">Agregar</a></li>
-                  <li><a class="dropdown-item ps-4" href="empleadoUpdate.html"><img style="margin-right: 1rem;"
-                        src="assets\arrow-clockwise.svg">Modificar</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item ps-4" href="empleadoDelete.html"><img style="margin-right: 1rem;"
-                        src="assets\trash3-fill.svg">Eliminar</a></li>
-                </ul>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false"><img style="margin-right: 1rem;" src="assets\journal-bookmark-fill.svg">Sistema de Apartado</a>
-                <ul class="dropdown-menu dropdown-menu-dark">
-                  <li><a class="dropdown-item ps-4" href="reservaAdd.html"><img style="margin-right: 1rem;"
-                        src="assets\plus-circle-fill.svg">Agregar</a></li>
-                  <li><a class="dropdown-item ps-4" href="reservaUpdate.html"><img style="margin-right: 1rem;"
-                        src="assets\arrow-clockwise.svg">Modificar</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item ps-4" href="reservaDelete.html"><img style="margin-right: 1rem;"
-                        src="assets\trash3-fill.svg">Eliminar</a></li>
-                </ul>
-              </li>
-              <li class="nav-item align-items-end flex-grow-1 pe-3">
-                <a class=" nav-link p-2" href="#"><img style="margin-right: 1rem;"
-                    src="assets\gear-fill.svg">Configuraciones</a>
-              </li>
-
-            </ul>
-          </nav>
-
-        </div>
-      </div>
-    </aside>
-
-    <main class="bd-main order-1">
-
-        <h1>Librería Pequeños Detalles</h1>
-
-        <section id="cuerpo" class="cuerpo">
-          <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
-      
-          <script>
-            var xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
-            var yValues = [55, 49, 44, 24, 15];
-            var barColors = [
-              "#b91d47",
-              "#00aba9",
-              "#2b5797",
-              "#e8c3b9",
-              "#1e7145"
-            ];
-      
-            new Chart("myChart", {
-              type: "doughnut",
-              data: {
-                labels: xValues,
-                datasets: [{
-                  backgroundColor: barColors,
-                  data: yValues
-                }]
-              },
-              options: {
-                title: {
-                  display: true,
-                  text: "World Wide Wine Production 2018"
-                }
-              }
-            });
-          </script>
-      
-        </section>
 
 
-    </main>
-  </div>
-
--->
-
-<!--
-  <section id="navbar" class="sticky-top">
-
-    <nav class="navbar navbar-dark bg-dark">
-      <div class="container-fluid justify-content-start">
-        <button class="navbar-toggler px-5" href="#" type="button" data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand px-5" href="#">Sistema de Control Ventas e Inventario</a>
         <div class="offcanvas offcanvas-start text-bg-dark" data-bs-scroll="true" tabindex="-1" id="offcanvasDarkNavbar"
           aria-labelledby="offcanvasDarkNavbarLabel">
           <div class="offcanvas-header p-5">
@@ -628,11 +362,7 @@
             </ul>
           </div>
         </div>
-      </div>
-    </nav>
-  </section>
 
--->
   
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
