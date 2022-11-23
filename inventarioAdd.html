@@ -9,230 +9,420 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
 
+  <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css\dashboard.css" rel="stylesheet">
 </head>
 
 <body>
 
+  <header class="navbar navbar-dark bg-dark navbar-expand-lg bd-navbar sticky-top">
+    <nav class="container-xxl bd-gutter flex-wrap flex-md-nowrap" aria-label="Main navigation">
+      <div class="bd-navbar-toggle">
 
-  <section id="navbar" class="sticky-top">
+        <button class="navbar-toggler p-2" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle docs navigation">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="bi" fill="currentColor"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M2.5 11.5A.5.5 0 0 1 3 11h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 7h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4A.5.5 0 0 1 3 3h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z">
+            </path>
+          </svg>
 
-    <nav class="navbar navbar-dark bg-dark">
-      <div class="container-fluid justify-content-start">
-        <button class="navbar-toggler px-5" href="#" type="button" data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
-          <span class="navbar-toggler-icon"></span>
+          <span class="d-none fs-6 pe-1">Browse</span>
         </button>
-        <a class="navbar-brand px-5" href="#">Sistema de Control Ventas e Inventario</a>
-        <div class="offcanvas offcanvas-start text-bg-dark" data-bs-scroll="true" tabindex="-1" id="offcanvasDarkNavbar"
-          aria-labelledby="offcanvasDarkNavbarLabel">
-          <div class="offcanvas-header p-5">
-            <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Libreria Pequeños Detalles</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
-              aria-label="Close"></button>
-          </div>
+      </div>
 
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a class="nav-link p-2" aria-current="page" href="index.html"><img style="margin-right: 1rem;"
-                    src="assets/house-fill.svg">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link p-2" href="catalogo.html"><img style="margin-right: 1rem;"
-                    src="assets\pencil-square.svg">Catálogo de Productos</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false"><img style="margin-right: 1rem;" src="assets\journal-text.svg">Inventario</a>
-                <ul class="dropdown-menu dropdown-menu-dark">
-                  <li><a class="dropdown-item ps-4" href="inventarioAdd.html"><img style="margin-right: 1rem;"
-                        src="assets\plus-circle-fill.svg">Agregar</a></li>
-                  <li><a class="dropdown-item ps-4" href="inventarioUpdate.html"><img style="margin-right: 1rem;"
-                        src="assets\arrow-clockwise.svg">Modificar</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item ps-4" href="inventarioDelete.html"><img style="margin-right: 1rem;"
-                        src="assets\trash3-fill.svg">Eliminar</a></li>
-                </ul>
-              </li>
+      <a class="navbar-brand p-0 me-0 me-lg-2 bg-dark" href="/">
+        <img src="img\inicialesWhite.png" class="d-inline-block align-text-top ms-5 me-3"
+          style="width: 3rem; height: 3rem;">
+      </a>
 
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false"><img style="margin-right: 1rem;" src="assets\cash-coin.svg">Ventas</a>
-                <ul class="dropdown-menu dropdown-menu-dark">
-                  <li><a class="dropdown-item ps-4" href="ventasAdd.html"><img style="margin-right: 1rem;"
-                        src="assets\plus-circle-fill.svg">Agregar</a></li>
-                  <li><a class="dropdown-item ps-4" href="ventasUpdate.html"><img style="margin-right: 1rem;"
-                        src="assets\arrow-clockwise.svg">Modificar</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item ps-4" href="ventasDelete.html"><img style="margin-right: 1rem;"
-                        src="assets\trash3-fill.svg">Eliminar</a></li>
-                </ul>
-              </li>
+      <div class="d-flex"></div>
 
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false"><img style="margin-right: 1rem;" src="assets\cash-stack.svg">Abonos</a>
-                <ul class="dropdown-menu dropdown-menu-dark">
-                  <li><a class="dropdown-item ps-4" href="abonoAdd.html"><img style="margin-right: 1rem;"
-                        src="assets\plus-circle-fill.svg">Agregar</a></li>
-                  <li><a class="dropdown-item ps-4" href="abonoUpdate.html"><img style="margin-right: 1rem;"
-                        src="assets\arrow-clockwise.svg">Modificar</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item ps-4" href="abonoDelete.html"><img style="margin-right: 1rem;"
-                        src="assets\trash3-fill.svg">Eliminar</a></li>
-                </ul>
-              </li>
 
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false"><img style="margin-right: 1rem;" src="assets\people.svg">Clientes</a>
-                <ul class="dropdown-menu dropdown-menu-dark">
-                  <li><a class="dropdown-item ps-4" href="clientesAdd.html"><img style="margin-right: 1rem;"
-                        src="assets\plus-circle-fill.svg">Agregar</a></li>
-                  <li><a class="dropdown-item ps-4" href="clientesUpdate.html"><img style="margin-right: 1rem;"
-                        src="assets\arrow-clockwise.svg">Modificar</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item ps-4" href="clientesDelete.html"><img style="margin-right: 1rem;"
-                        src="assets\trash3-fill.svg">Eliminar</a></li>
-                </ul>
-              </li>
+      <div class="offcanvas-lg offcanvas-end flex-grow-1" tabindex="-1" id="bdNavbar"
+        aria-labelledby="bdNavbarOffcanvasLabel" data-bs-scroll="true">
 
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false"><img style="margin-right: 1rem;" src="assets\bxs-report.svg">Reportes</a>
-                <ul class="dropdown-menu dropdown-menu-dark">
-                  <li><a class="dropdown-item ps-4" href="ventasDia.html"><img style="margin-right: 1rem;"
-                        src="assets\arrow-right-short.svg">Ventas Diarias</a></li>
-                  <li><a class="dropdown-item ps-4" href="ventasMes.html"><img style="margin-right: 1rem;"
-                        src="assets\arrow-right-short.svg">Ventas Mensuales</a></li>
-                  <li><a class="dropdown-item ps-4" href="gananciasDiarias.html"><img style="margin-right: 1rem;"
-                        src="assets\arrow-right-short.svg">Ganancias Diarias</a></li>
-                  <li><a class="dropdown-item ps-4" href="gananciasMes.html"><img style="margin-right: 1rem;"
-                        src="assets\arrow-right-short.svg">Ganancias Mensuales</a></li>
-                </ul>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false"><img style="margin-right: 1rem;" src="assets\bxs-id-card.svg">Empleados</a>
-                <ul class="dropdown-menu dropdown-menu-dark">
-                  <li><a class="dropdown-item ps-4" href="empleadoAdd.html"><img style="margin-right: 1rem;"
-                        src="assets\plus-circle-fill.svg">Agregar</a></li>
-                  <li><a class="dropdown-item ps-4" href="empleadoUpdate.html"><img style="margin-right: 1rem;"
-                        src="assets\arrow-clockwise.svg">Modificar</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item ps-4" href="empleadoDelete.html"><img style="margin-right: 1rem;"
-                        src="assets\trash3-fill.svg">Eliminar</a></li>
-                </ul>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false"><img style="margin-right: 1rem;" src="assets\journal-bookmark-fill.svg">Sistema de Apartado</a>
-                <ul class="dropdown-menu dropdown-menu-dark">
-                  <li><a class="dropdown-item ps-4" href="reservaAdd.html"><img style="margin-right: 1rem;"
-                        src="assets\plus-circle-fill.svg">Agregar</a></li>
-                  <li><a class="dropdown-item ps-4" href="reservaUpdate.html"><img style="margin-right: 1rem;"
-                        src="assets\arrow-clockwise.svg">Modificar</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item ps-4" href="reservaDelete.html"><img style="margin-right: 1rem;"
-                        src="assets\trash3-fill.svg">Eliminar</a></li>
-                </ul>
-              </li>
-              <li class="nav-item align-items-end flex-grow-1 pe-3">
-                <a class=" nav-link p-2" href="#"><img style="margin-right: 1rem;"
-                    src="assets\gear-fill.svg">Configuraciones</a>
-              </li>
-
-            </ul>
-          </div>
+        <div class="offcanvas-body px-4 pt-5 p-lg-0">
+          <h3 class="text-white"> Sistema de Control de Ventas e Inventario</h3>
         </div>
       </div>
     </nav>
-  </section>
+  </header>
 
-  <h1 style="margin-left: 9%;">Agregar Productos al Inventario</h1>
+  <div class="container-fluid">
+    <div class="row">
+      <nav id="sidebarMenu" class="col-3 d-lg-block bg-light sidebar collapse">
+        <div class="position-sticky pt-3 sidebar-sticky">
+          <!--
+          <div class="text-center">
+            <img class="img-fluid" style="width: 60%;" src="img\Logotipo.png">
+          </div>-->
+          <ul class="nav px-3 pt-4 flex-column">
+            <li class="py-1 nav-item w-100">
+              <a class="btn btn-toggle d-inline-flex align-items-center rounded border-0" aria-current="page"
+                href="index.html"><img style="margin-right: 1rem;" src="assets/house-fill.svg">Inicio</a>
+            </li>
 
-  <section id="cuerpo" class="cuerpo">
+            <li class="py-1 nav-item w-100">
+              <a class="btn btn-toggle d-inline-flex align-items-center rounded border-0" href="catalogo.html"><img
+                  style="margin-right: 1rem;" src="assets\pencil-square.svg">Catálogo de Productos</a>
+            </li>
 
-    <form class="row g-3">
-      <div class="col-md-3">
-        <label for="inputState" class="form-label">Categoría</label>
-        <select id="inputState" class="form-select">
-          <option selected>Librería</option>
-          <option>Variedades</option>
-        </select>
-      </div>
-      <div class="col-md-6">
-        <label for="" class="form-label">Nombre del Producto</label>
-        <input type="" class="form-control" id="inputEmail4">
-      </div>
-      <div class="col-md-3">
-        <label for="inputState" class="form-label">Marca</label>
-        <select id="inputState" class="form-select">
-          <option selected>Bic</option>
-          <option>Paper-Mate</option>
-          <option>Pointer</option>
-          <option>Stabilo</option>
-          <option>...</option>
-        </select>
-      </div>
-      <div class="col-md-3">
-        <label for="inputZip" class="form-label">Cantidad</label>
-        <input type="text" class="form-control" id="inputZip">
-      </div>
-      <div class="col-md-3">
-        <label for="inputState" class="form-label">Presentación</label>
-        <select id="inputState" class="form-select">
-          <option selected>Unidades</option>
-          <option>Docenas</option>
-          <option>Cajas</option>
-          <option>Paquetes</option>
-        </select>
-      </div>
-      <div class="col-md-3">
-        <label for="inputZip" class="form-label">Precio Unitario de Compra</label>
-        <div class="input-group mb-2">
-          <span class="input-group-text">C$</span>
-          <input type="text" class="form-control" aria-label="Amount">
+            <li class="py-1 nav-item w-100">
+              <a class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                data-bs-toggle="collapse" data-bs-target="#inventario-collapse" aria-expanded="true">
+                <img style="margin-right: 1rem;" src="assets\journal-text.svg">Inventario <img
+                  src="assets\bx-chevron-down.svg" class="btn-toggle-L">
+              </a>
+              <div class="collapse" id="inventario-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="inventarioAdd.html"><img
+                        style="margin-right: 1rem;" src="assets\plus-circle-fill.svg">Agregar</a></li>
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="inventarioUpdate.html"><img
+                        style="margin-right: 1rem;" src="assets\arrow-clockwise.svg">Modificar</a></li>
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="inventarioDelete.html"><img
+                        style="margin-right: 1rem;" src="assets\trash3-fill.svg">Eliminar</a></li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="py-1 nav-item w-100">
+              <a class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                data-bs-toggle="collapse" data-bs-target="#ventas-collapse" aria-expanded="true">
+                <img style="margin-right: 1rem;" src="assets\cash-coin.svg">Ventas <img src="assets\bx-chevron-down.svg"
+                  class="btn-toggle-L">
+              </a>
+              <div class="collapse" id="ventas-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="ventasAdd.html"><img
+                        style="margin-right: 1rem;" src="assets\plus-circle-fill.svg">Agregar</a></li>
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="ventasUpdate.html"><img
+                        style="margin-right: 1rem;" src="assets\arrow-clockwise.svg">Modificar</a></li>
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="ventasDelete.html"><img
+                        style="margin-right: 1rem;" src="assets\trash3-fill.svg">Eliminar</a></li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="py-1 nav-item w-100">
+              <a class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                data-bs-toggle="collapse" data-bs-target="#abonos-collapse" aria-expanded="true">
+                <img style="margin-right: 1rem;" src="assets\cash-stack.svg">Abonos<img src="assets\bx-chevron-down.svg"
+                  class="btn-toggle-L">
+              </a>
+              <div class="collapse" id="abonos-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="abonoAdd.html"><img
+                        style="margin-right: 1rem;" src="assets\plus-circle-fill.svg">Agregar</a></li>
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="abonoUpdate.html"><img
+                        style="margin-right: 1rem;" src="assets\arrow-clockwise.svg">Modificar</a></li>
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="abonoDelete.html"><img
+                        style="margin-right: 1rem;" src="assets\trash3-fill.svg">Eliminar</a></li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="py-1 nav-item w-100">
+              <a class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                data-bs-toggle="collapse" data-bs-target="#clientes-collapse" aria-expanded="true">
+                <img style="margin-right: 1rem;" src="assets\people.svg">Clientes<img src="assets\bx-chevron-down.svg"
+                  class="btn-toggle-L">
+              </a>
+              <div class="collapse" id="clientes-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="clientesAdd.html"><img
+                        style="margin-right: 1rem;" src="assets\plus-circle-fill.svg">Agregar</a></li>
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="clientesUpdate.html"><img
+                        style="margin-right: 1rem;" src="assets\arrow-clockwise.svg">Modificar</a></li>
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="clientesDelete.html"><img
+                        style="margin-right: 1rem;" src="assets\trash3-fill.svg">Eliminar</a></li>
+                </ul>
+              </div>
+            </li>
+
+
+            <li class="py-1 nav-item w-100">
+              <a class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                data-bs-toggle="collapse" data-bs-target="#reportes-collapse" aria-expanded="true">
+                <img style="margin-right: 1rem;" src="assets\bxs-report.svg">Reportes</a><img
+                src="assets\bx-chevron-down.svg" class="btn-toggle-L">
+              </a>
+              <div class="collapse" id="reportes-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="ventasDia.html"><img
+                        style="margin-right: 1rem;" src="assets\bx-chevron-right.svg">Ventas Diarias</a></li>
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="ventasMes.html"><img
+                        style="margin-right: 1rem;" src="assets\bx-chevron-right.svg">Ventas Mensuales</a></li>
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="gananciasDiarias.html"><img
+                        style="margin-right: 1rem;" src="assets\bx-chevron-right.svg">Ganancias Diarias</a></li>
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="gananciasMes.html"><img
+                        style="margin-right: 1rem;" src="assets\bx-chevron-right.svg">Ganancias Mensuales</a></li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="py-1 nav-item w-100">
+              <a class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                data-bs-toggle="collapse" data-bs-target="#empleados-collapse" aria-expanded="true">
+                <img style="margin-right: 1rem;" src="assets\bxs-id-card.svg">Empleados<img
+                  src="assets\bx-chevron-down.svg" class="btn-toggle-L">
+              </a>
+              <div class="collapse" id="empleados-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="empleadoAdd.html"><img
+                        style="margin-right: 1rem;" src="assets\plus-circle-fill.svg">Agregar</a></li>
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="empleadoUpdate.html"><img
+                        style="margin-right: 1rem;" src="assets\arrow-clockwise.svg">Modificar</a></li>
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="empleadoDelete.html"><img
+                        style="margin-right: 1rem;" src="assets\trash3-fill.svg">Eliminar</a></li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="py-1 nav-item w-100">
+              <a class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                data-bs-toggle="collapse" data-bs-target="#apartados-collapse" aria-expanded="true">
+                <img style="margin-right: 1rem;" src="assets\journal-bookmark-fill.svg">Sistema de
+                Apartado<img src="assets\bx-chevron-down.svg" class="btn-toggle-L">
+              </a>
+              <div class="collapse" id="apartados-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="reservaAdd.html"><img
+                        style="margin-right: 1rem;" src="assets\plus-circle-fill.svg">Agregar</a></li>
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="reservaUpdate.html"><img
+                        style="margin-right: 1rem;" src="assets\arrow-clockwise.svg">Modificar</a></li>
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="reservaDelete.html"><img
+                        style="margin-right: 1rem;" src="assets\trash3-fill.svg">Eliminar</a></li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="py-1 nav-item w-100">
+              <a class="btn btn-toggle d-inline-flex align-items-center rounded border-0" href="#"><img
+                  style="margin-right: 1rem;" src="assets\gear-fill.svg">Configuraciones</a>
+            </li>
+
+          </ul>
         </div>
-      </div>
-      <div class="col-md-3">
-        <label for="inputZip" class="form-label">Precio Unitario de Venta</label>
-        <div class="input-group mb-2">
-          <span class="input-group-text">C$</span>
-          <input type="text" class="form-control" aria-label="Amount">
+      </nav>
+
+      <main class="ms-sm-auto col-lg-9 px-md-4">
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-1 mb-4 border-bottom">
+          <h1 class="pb-1">Agregar Productos al Inventario</h1>
         </div>
+        <form class="row g-3">
+          <div class="col-md-3">
+            <label for="inputState" class="form-label">Categoría</label>
+            <select id="inputState" class="form-select">
+              <option selected>Librería</option>
+              <option>Variedades</option>
+            </select>
+          </div>
+          <div class="col-md-6">
+            <label for="" class="form-label">Nombre del Producto</label>
+            <input type="" class="form-control" id="inputEmail4">
+          </div>
+          <div class="col-md-3">
+            <label for="inputState" class="form-label">Marca</label>
+            <select id="inputState" class="form-select">
+              <option selected>Bic</option>
+              <option>Paper-Mate</option>
+              <option>Pointer</option>
+              <option>Stabilo</option>
+              <option>...</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label for="inputZip" class="form-label">Cantidad</label>
+            <input type="text" class="form-control" id="inputZip">
+          </div>
+          <div class="col-md-3">
+            <label for="inputState" class="form-label">Presentación</label>
+            <select id="inputState" class="form-select">
+              <option selected>Unidades</option>
+              <option>Docenas</option>
+              <option>Cajas</option>
+              <option>Paquetes</option>
+            </select>
+          </div>
+          <div class="col-md-3">
+            <label for="inputZip" class="form-label">Precio Unitario de Compra</label>
+            <div class="input-group mb-2">
+              <span class="input-group-text">C$</span>
+              <input type="text" class="form-control" aria-label="Amount">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <label for="inputZip" class="form-label">Precio Unitario de Venta</label>
+            <div class="input-group mb-2">
+              <span class="input-group-text">C$</span>
+              <input type="text" class="form-control" aria-label="Amount">
+            </div>
+          </div>
+    
+          <div class="col-md-3">
+            <label for="inputState" class="form-label">Fecha de Compra</label>
+            <input type="date" class="form-control">
+          </div>
+    
+          <div class="clearfix">
+            <button type="submit" class=" btn btn-primary float-end">Agregar</button>
+            <button type="button" class=" btn btn-outline-danger float-end me-5">Cancelar</button>
+          </div>
+    
+        </form>
+    
+        <div class="pb-5"></div>
+
+      </main>
+    </div>
+  </div>
+
+
+  <div class="navbar container-md justify-content-start">
+
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasDarkNavbar"
+      aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas-header text-center">
+        <h3 class="mt-3">Librería y Variedades Pequeños Detalles</h3>
       </div>
 
-      <div class="col-md-3">
-        <label for="inputState" class="form-label">Fecha de Compra</label>
-        <input type="date" class="form-control">
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link p-2" aria-current="page" href="index.html"><img style="margin-right: 1rem;"
+                src="assets/house-fill.svg">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link p-2" href="catalogo.html"><img style="margin-right: 1rem;"
+                src="assets\pencil-square.svg">Catálogo de Productos</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false"><img style="margin-right: 1rem;" src="assets\journal-text.svg">Inventario</a>
+            <ul class="dropdown-menu dropdown-menu">
+              <li><a class="dropdown-item ps-4" href="inventarioAdd.html"><img style="margin-right: 1rem;"
+                    src="assets\plus-circle-fill.svg">Agregar</a></li>
+              <li><a class="dropdown-item ps-4" href="inventarioUpdate.html"><img style="margin-right: 1rem;"
+                    src="assets\arrow-clockwise.svg">Modificar</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item ps-4" href="inventarioDelete.html"><img style="margin-right: 1rem;"
+                    src="assets\trash3-fill.svg">Eliminar</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false"><img style="margin-right: 1rem;" src="assets\cash-coin.svg">Ventas</a>
+            <ul class="dropdown-menu dropdown-menu">
+              <li><a class="dropdown-item ps-4" href="ventasAdd.html"><img style="margin-right: 1rem;"
+                    src="assets\plus-circle-fill.svg">Agregar</a></li>
+              <li><a class="dropdown-item ps-4" href="ventasUpdate.html"><img style="margin-right: 1rem;"
+                    src="assets\arrow-clockwise.svg">Modificar</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item ps-4" href="ventasDelete.html"><img style="margin-right: 1rem;"
+                    src="assets\trash3-fill.svg">Eliminar</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false"><img style="margin-right: 1rem;" src="assets\cash-stack.svg">Abonos</a>
+            <ul class="dropdown-menu dropdown-menu">
+              <li><a class="dropdown-item ps-4" href="abonoAdd.html"><img style="margin-right: 1rem;"
+                    src="assets\plus-circle-fill.svg">Agregar</a></li>
+              <li><a class="dropdown-item ps-4" href="abonoUpdate.html"><img style="margin-right: 1rem;"
+                    src="assets\arrow-clockwise.svg">Modificar</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item ps-4" href="abonoDelete.html"><img style="margin-right: 1rem;"
+                    src="assets\trash3-fill.svg">Eliminar</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false"><img style="margin-right: 1rem;" src="assets\people.svg">Clientes</a>
+            <ul class="dropdown-menu dropdown-menu">
+              <li><a class="dropdown-item ps-4" href="clientesAdd.html"><img style="margin-right: 1rem;"
+                    src="assets\plus-circle-fill.svg">Agregar</a></li>
+              <li><a class="dropdown-item ps-4" href="clientesUpdate.html"><img style="margin-right: 1rem;"
+                    src="assets\arrow-clockwise.svg">Modificar</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item ps-4" href="clientesDelete.html"><img style="margin-right: 1rem;"
+                    src="assets\trash3-fill.svg">Eliminar</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false"><img style="margin-right: 1rem;" src="assets\bxs-report.svg">Reportes</a>
+            <ul class="dropdown-menu dropdown-menu">
+              <li><a class="dropdown-item ps-4" href="ventasDia.html"><img style="margin-right: 1rem;"
+                    src="assets\bx-chevron-right.svg">Ventas Diarias</a></li>
+              <li><a class="dropdown-item ps-4" href="ventasMes.html"><img style="margin-right: 1rem;"
+                    src="assets\bx-chevron-right.svg">Ventas Mensuales</a></li>
+              <li><a class="dropdown-item ps-4" href="gananciasDiarias.html"><img style="margin-right: 1rem;"
+                    src="assets\bx-chevron-right.svg">Ganancias Diarias</a></li>
+              <li><a class="dropdown-item ps-4" href="gananciasMes.html"><img style="margin-right: 1rem;"
+                    src="assets\bx-chevron-right.svg">Ganancias Mensuales</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false"><img style="margin-right: 1rem;" src="assets\bxs-id-card.svg">Empleados</a>
+            <ul class="dropdown-menu dropdown-menu">
+              <li><a class="dropdown-item ps-4" href="empleadoAdd.html"><img style="margin-right: 1rem;"
+                    src="assets\plus-circle-fill.svg">Agregar</a></li>
+              <li><a class="dropdown-item ps-4" href="empleadoUpdate.html"><img style="margin-right: 1rem;"
+                    src="assets\arrow-clockwise.svg">Modificar</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item ps-4" href="empleadoDelete.html"><img style="margin-right: 1rem;"
+                    src="assets\trash3-fill.svg">Eliminar</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false"><img style="margin-right: 1rem;" src="assets\journal-bookmark-fill.svg">Sistema
+              de Apartado</a>
+            <ul class="dropdown-menu dropdown-menu">
+              <li><a class="dropdown-item ps-4" href="reservaAdd.html"><img style="margin-right: 1rem;"
+                    src="assets\plus-circle-fill.svg">Agregar</a></li>
+              <li><a class="dropdown-item ps-4" href="reservaUpdate.html"><img style="margin-right: 1rem;"
+                    src="assets\arrow-clockwise.svg">Modificar</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item ps-4" href="reservaDelete.html"><img style="margin-right: 1rem;"
+                    src="assets\trash3-fill.svg">Eliminar</a></li>
+            </ul>
+          </li>
+          <li class="nav-item align-items-end flex-grow-1 pe-3">
+            <a class=" nav-link p-2" href="#"><img style="margin-right: 1rem;"
+                src="assets\gear-fill.svg">Configuraciones</a>
+          </li>
+
+        </ul>
       </div>
+    </div>
+  </div>
 
-      <div class="clearfix">
-        <button type="submit" class=" btn btn-primary float-end">Agregar</button>
-        <button type="button" class=" btn btn-outline-danger float-end me-5">Cancelar</button>
-      </div>
 
-    </form>
-
-    <div class="pb-5"></div>
-
-  </section>
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -240,62 +430,11 @@
     integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
     crossorigin="anonymous"></script>
 
-  <script src="JavaScript/javascript.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
+    integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
+    crossorigin="anonymous"></script>
+  <script src="JavaScript\dashboard.js"></script>
 
 </body>
-
-<footer class="footer-48201" id="footer">
-
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 pr-md-5">
-        <a href="#" class="footer-site-logo d-block mb-4">KateS</a>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi quasi perferendis ratione
-          perspiciatis
-          accusantium.</p>
-      </div>
-      <div class="col-md">
-        <ul class="list-unstyled nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Services</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </div>
-      <div class="col-md">
-        <ul class="list-unstyled nav-links">
-          <li><a href="#">Clients</a></li>
-          <li><a href="#">Team</a></li>
-          <li><a href="#">Career</a></li>
-        </ul>
-      </div>
-      <div class="col-md">
-        <ul class="list-unstyled nav-links">
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms &amp; Conditions</a></li>
-          <li><a href="#">Partners</a></li>
-        </ul>
-      </div>
-      <div class="col-md text-md-center">
-        <ul class="social list-unstyled">
-          <li><a href="#"><img src="assets/instagram.svg"></a></li>
-          <li><a href="#"><img src="assets/twitter.svg"></a></li>
-          <li><a href="#"><img src="assets/facebook.svg"></a></li>
-          <li><a href="#"><img src="assets/github.svg"></a></li>
-
-        </ul>
-        <p class=""><a href="#" class="btn btn-tertiary">Contact Us</a></p>
-      </div>
-    </div>
-
-    <div class="row ">
-      <div class="col-12 text-center">
-        <div class="copyright mt-5 pt-5">
-          <p><small>&copy; 2022 All Rights Reserved.</small></p>
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
 
 </html>
