@@ -61,143 +61,149 @@
           <div class="text-center">
             <img class="img-fluid" style="width: 60%;" src="img\Logotipo.png">
           </div>-->
-          <ul class="nav ps-3 pt-4 flex-column">
-            <li class="nav-item">
-              <a class="nav-link p-2" aria-current="page" href="index.html"><img style="margin-right: 1rem;"
-                  src="assets/house-fill.svg">Inicio</a>
+          <ul class="nav px-3 pt-4 flex-column">
+            <li class="py-1 nav-item w-100">
+              <a class="btn btn-toggle d-inline-flex align-items-center rounded border-0" aria-current="page"
+                href="index.html"><img style="margin-right: 1rem;" src="assets/house-fill.svg">Inicio</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link p-2" href="catalogo.html"><img style="margin-right: 1rem;"
-                  src="assets\pencil-square.svg">Catálogo de Productos</a>
+
+            <li class="py-1 nav-item w-100">
+              <a class="btn btn-toggle d-inline-flex align-items-center rounded border-0" href="catalogo.html"><img
+                  style="margin-right: 1rem;" src="assets\pencil-square.svg">Catálogo de Productos</a>
             </li>
-            <li class="mb-1">
+
+            <li class="py-1 nav-item w-100">
               <a class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
-                data-bs-toggle="collapse" data-bs-target="#home-collapse" aria-expanded="true">
+                data-bs-toggle="collapse" data-bs-target="#inventario-collapse" aria-expanded="true">
                 <img style="margin-right: 1rem;" src="assets\journal-text.svg">Inventario <img
                   src="assets\bx-chevron-down.svg" class="btn-toggle-L">
               </a>
-              <div class="collapse" id="home-collapse">
+              <div class="collapse" id="inventario-collapse">
                 <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
-                  <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Overview</a></li>
-                  <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Updates</a></li>
-                  <li><a href="#" class="link-dark d-inline-flex text-decoration-none rounded">Reports</a></li>
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="inventarioAdd.html"><img
+                        style="margin-right: 1rem;" src="assets\plus-circle-fill.svg">Agregar</a></li>
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="inventarioUpdate.html"><img
+                        style="margin-right: 1rem;" src="assets\arrow-clockwise.svg">Modificar</a></li>
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="inventarioDelete.html"><img
+                        style="margin-right: 1rem;" src="assets\trash3-fill.svg">Eliminar</a></li>
                 </ul>
               </div>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false"><img style="margin-right: 1rem;" src="assets\journal-text.svg">Inventario</a>
-              <ul class="dropdown-menu dropdown-menu">
-                <li><a class="dropdown-item ps-4" href="inventarioAdd.html"><img style="margin-right: 1rem;"
-                      src="assets\plus-circle-fill.svg">Agregar</a></li>
-                <li><a class="dropdown-item ps-4" href="inventarioUpdate.html"><img style="margin-right: 1rem;"
-                      src="assets\arrow-clockwise.svg">Modificar</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item ps-4" href="inventarioDelete.html"><img style="margin-right: 1rem;"
-                      src="assets\trash3-fill.svg">Eliminar</a></li>
-              </ul>
+
+            <li class="py-1 nav-item w-100">
+              <a class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                data-bs-toggle="collapse" data-bs-target="#ventas-collapse" aria-expanded="true">
+                <img style="margin-right: 1rem;" src="assets\cash-coin.svg">Ventas <img src="assets\bx-chevron-down.svg"
+                  class="btn-toggle-L">
+              </a>
+              <div class="collapse" id="ventas-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="ventasAdd.html"><img
+                        style="margin-right: 1rem;" src="assets\plus-circle-fill.svg">Agregar</a></li>
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="ventasUpdate.html"><img
+                        style="margin-right: 1rem;" src="assets\arrow-clockwise.svg">Modificar</a></li>
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="ventasDelete.html"><img
+                        style="margin-right: 1rem;" src="assets\trash3-fill.svg">Eliminar</a></li>
+                </ul>
+              </div>
             </li>
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false"><img style="margin-right: 1rem;" src="assets\cash-coin.svg">Ventas</a>
-              <ul class="dropdown-menu dropdown-menu">
-                <li><a class="dropdown-item ps-4" href="ventasAdd.html"><img style="margin-right: 1rem;"
-                      src="assets\plus-circle-fill.svg">Agregar</a></li>
-                <li><a class="dropdown-item ps-4" href="ventasUpdate.html"><img style="margin-right: 1rem;"
-                      src="assets\arrow-clockwise.svg">Modificar</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item ps-4" href="ventasDelete.html"><img style="margin-right: 1rem;"
-                      src="assets\trash3-fill.svg">Eliminar</a></li>
-              </ul>
+            <li class="py-1 nav-item w-100">
+              <a class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                data-bs-toggle="collapse" data-bs-target="#abonos-collapse" aria-expanded="true">
+                <img style="margin-right: 1rem;" src="assets\cash-stack.svg">Abonos<img src="assets\bx-chevron-down.svg"
+                  class="btn-toggle-L">
+              </a>
+              <div class="collapse" id="abonos-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="abonoAdd.html"><img
+                        style="margin-right: 1rem;" src="assets\plus-circle-fill.svg">Agregar</a></li>
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="abonoUpdate.html"><img
+                        style="margin-right: 1rem;" src="assets\arrow-clockwise.svg">Modificar</a></li>
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="abonoDelete.html"><img
+                        style="margin-right: 1rem;" src="assets\trash3-fill.svg">Eliminar</a></li>
+                </ul>
+              </div>
             </li>
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false"><img style="margin-right: 1rem;" src="assets\cash-stack.svg">Abonos</a>
-              <ul class="dropdown-menu dropdown-menu">
-                <li><a class="dropdown-item ps-4" href="abonoAdd.html"><img style="margin-right: 1rem;"
-                      src="assets\plus-circle-fill.svg">Agregar</a></li>
-                <li><a class="dropdown-item ps-4" href="abonoUpdate.html"><img style="margin-right: 1rem;"
-                      src="assets\arrow-clockwise.svg">Modificar</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item ps-4" href="abonoDelete.html"><img style="margin-right: 1rem;"
-                      src="assets\trash3-fill.svg">Eliminar</a></li>
-              </ul>
+            <li class="py-1 nav-item w-100">
+              <a class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                data-bs-toggle="collapse" data-bs-target="#clientes-collapse" aria-expanded="true">
+                <img style="margin-right: 1rem;" src="assets\people.svg">Clientes<img src="assets\bx-chevron-down.svg"
+                  class="btn-toggle-L">
+              </a>
+              <div class="collapse" id="clientes-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="clientesAdd.html"><img
+                        style="margin-right: 1rem;" src="assets\plus-circle-fill.svg">Agregar</a></li>
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="clientesUpdate.html"><img
+                        style="margin-right: 1rem;" src="assets\arrow-clockwise.svg">Modificar</a></li>
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="clientesDelete.html"><img
+                        style="margin-right: 1rem;" src="assets\trash3-fill.svg">Eliminar</a></li>
+                </ul>
+              </div>
             </li>
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false"><img style="margin-right: 1rem;" src="assets\people.svg">Clientes</a>
-              <ul class="dropdown-menu dropdown-menu">
-                <li><a class="dropdown-item ps-4" href="clientesAdd.html"><img style="margin-right: 1rem;"
-                      src="assets\plus-circle-fill.svg">Agregar</a></li>
-                <li><a class="dropdown-item ps-4" href="clientesUpdate.html"><img style="margin-right: 1rem;"
-                      src="assets\arrow-clockwise.svg">Modificar</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item ps-4" href="clientesDelete.html"><img style="margin-right: 1rem;"
-                      src="assets\trash3-fill.svg">Eliminar</a></li>
-              </ul>
+
+            <li class="py-1 nav-item w-100">
+              <a class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                data-bs-toggle="collapse" data-bs-target="#reportes-collapse" aria-expanded="true">
+                <img style="margin-right: 1rem;" src="assets\bxs-report.svg">Reportes</a><img
+                src="assets\bx-chevron-down.svg" class="btn-toggle-L">
+              </a>
+              <div class="collapse" id="reportes-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="ventasDia.html"><img
+                        style="margin-right: 1rem;" src="assets\bx-chevron-right.svg">Ventas Diarias</a></li>
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="ventasMes.html"><img
+                        style="margin-right: 1rem;" src="assets\bx-chevron-right.svg">Ventas Mensuales</a></li>
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="gananciasDiarias.html"><img
+                        style="margin-right: 1rem;" src="assets\bx-chevron-right.svg">Ganancias Diarias</a></li>
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="gananciasMes.html"><img
+                        style="margin-right: 1rem;" src="assets\bx-chevron-right.svg">Ganancias Mensuales</a></li>
+                </ul>
+              </div>
             </li>
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false"><img style="margin-right: 1rem;" src="assets\bxs-report.svg">Reportes</a>
-              <ul class="dropdown-menu dropdown-menu">
-                <li><a class="dropdown-item ps-4" href="ventasDia.html"><img style="margin-right: 1rem;"
-                      src="assets\arrow-right-short.svg">Ventas Diarias</a></li>
-                <li><a class="dropdown-item ps-4" href="ventasMes.html"><img style="margin-right: 1rem;"
-                      src="assets\arrow-right-short.svg">Ventas Mensuales</a></li>
-                <li><a class="dropdown-item ps-4" href="gananciasDiarias.html"><img style="margin-right: 1rem;"
-                      src="assets\arrow-right-short.svg">Ganancias Diarias</a></li>
-                <li><a class="dropdown-item ps-4" href="gananciasMes.html"><img style="margin-right: 1rem;"
-                      src="assets\arrow-right-short.svg">Ganancias Mensuales</a></li>
-              </ul>
+            <li class="py-1 nav-item w-100">
+              <a class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                data-bs-toggle="collapse" data-bs-target="#empleados-collapse" aria-expanded="true">
+                <img style="margin-right: 1rem;" src="assets\bxs-id-card.svg">Empleados<img
+                  src="assets\bx-chevron-down.svg" class="btn-toggle-L">
+              </a>
+              <div class="collapse" id="empleados-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="empleadoAdd.html"><img
+                        style="margin-right: 1rem;" src="assets\plus-circle-fill.svg">Agregar</a></li>
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="empleadoUpdate.html"><img
+                        style="margin-right: 1rem;" src="assets\arrow-clockwise.svg">Modificar</a></li>
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="empleadoDelete.html"><img
+                        style="margin-right: 1rem;" src="assets\trash3-fill.svg">Eliminar</a></li>
+                </ul>
+              </div>
             </li>
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false"><img style="margin-right: 1rem;" src="assets\bxs-id-card.svg">Empleados</a>
-              <ul class="dropdown-menu dropdown-menu">
-                <li><a class="dropdown-item ps-4" href="empleadoAdd.html"><img style="margin-right: 1rem;"
-                      src="assets\plus-circle-fill.svg">Agregar</a></li>
-                <li><a class="dropdown-item ps-4" href="empleadoUpdate.html"><img style="margin-right: 1rem;"
-                      src="assets\arrow-clockwise.svg">Modificar</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item ps-4" href="empleadoDelete.html"><img style="margin-right: 1rem;"
-                      src="assets\trash3-fill.svg">Eliminar</a></li>
-              </ul>
+            <li class="py-1 nav-item w-100">
+              <a class="btn btn-toggle d-inline-flex align-items-center rounded border-0 collapsed"
+                data-bs-toggle="collapse" data-bs-target="#apartados-collapse" aria-expanded="true">
+                <img style="margin-right: 1rem;" src="assets\journal-bookmark-fill.svg">Sistema de
+                Apartado<img src="assets\bx-chevron-down.svg" class="btn-toggle-L">
+              </a>
+              <div class="collapse" id="apartados-collapse">
+                <ul class="btn-toggle-nav list-unstyled fw-normal pb-1 small">
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="reservaAdd.html"><img
+                        style="margin-right: 1rem;" src="assets\plus-circle-fill.svg">Agregar</a></li>
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="reservaUpdate.html"><img
+                        style="margin-right: 1rem;" src="assets\arrow-clockwise.svg">Modificar</a></li>
+                  <li><a class="link-dark d-inline-flex text-decoration-none rounded" href="reservaDelete.html"><img
+                        style="margin-right: 1rem;" src="assets\trash3-fill.svg">Eliminar</a></li>
+                </ul>
+              </div>
             </li>
 
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false"><img style="margin-right: 1rem;" src="assets\journal-bookmark-fill.svg">Sistema de
-                Apartado</a>
-              <ul class="dropdown-menu dropdown-menu">
-                <li><a class="dropdown-item ps-4" href="reservaAdd.html"><img style="margin-right: 1rem;"
-                      src="assets\plus-circle-fill.svg">Agregar</a></li>
-                <li><a class="dropdown-item ps-4" href="reservaUpdate.html"><img style="margin-right: 1rem;"
-                      src="assets\arrow-clockwise.svg">Modificar</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item ps-4" href="reservaDelete.html"><img style="margin-right: 1rem;"
-                      src="assets\trash3-fill.svg">Eliminar</a></li>
-              </ul>
-            </li>
-            <li class="nav-item align-items-end flex-grow-1 pe-3">
-              <a class=" nav-link p-2" href="#"><img style="margin-right: 1rem;"
-                  src="assets\gear-fill.svg">Configuraciones</a>
+            <li class="py-1 nav-item w-100">
+              <a class="btn btn-toggle d-inline-flex align-items-center rounded border-0" href="#"><img
+                  style="margin-right: 1rem;" src="assets\gear-fill.svg">Configuraciones</a>
             </li>
 
           </ul>
@@ -205,12 +211,13 @@
       </nav>
 
       <main class="ms-sm-auto col-lg-9 px-md-4">
-        <div
-          class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-          <h1 class="h2">Librería Pequeños Detalles</h1>
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-1 mb-4 border-bottom">
+          <h1 class="pb-1">Librería Pequeños Detalles</h1>
         </div>
 
         <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+        <canvas id="mynewChart" style="width:100%;max-width:600px"></canvas>
       </main>
     </div>
   </div>
@@ -219,145 +226,145 @@
 
 
 
-      <div class="navbar container-md justify-content-start">
+  <div class="navbar container-md justify-content-start">
 
-        <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasDarkNavbar"
-          aria-labelledby="offcanvasDarkNavbarLabel">
-          <div class="offcanvas-header">
-            <img style="width: 18rem; height: 13rem;" src="img\Logotipo.png">
-          </div>
-
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a class="nav-link p-2" aria-current="page" href="index.html"><img style="margin-right: 1rem;"
-                    src="assets/house-fill.svg">Inicio</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link p-2" href="catalogo.html"><img style="margin-right: 1rem;"
-                    src="assets\pencil-square.svg">Catálogo de Productos</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false"><img style="margin-right: 1rem;" src="assets\journal-text.svg">Inventario</a>
-                <ul class="dropdown-menu dropdown-menu">
-                  <li><a class="dropdown-item ps-4" href="inventarioAdd.html"><img style="margin-right: 1rem;"
-                        src="assets\plus-circle-fill.svg">Agregar</a></li>
-                  <li><a class="dropdown-item ps-4" href="inventarioUpdate.html"><img style="margin-right: 1rem;"
-                        src="assets\arrow-clockwise.svg">Modificar</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item ps-4" href="inventarioDelete.html"><img style="margin-right: 1rem;"
-                        src="assets\trash3-fill.svg">Eliminar</a></li>
-                </ul>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false"><img style="margin-right: 1rem;" src="assets\cash-coin.svg">Ventas</a>
-                <ul class="dropdown-menu dropdown-menu">
-                  <li><a class="dropdown-item ps-4" href="ventasAdd.html"><img style="margin-right: 1rem;"
-                        src="assets\plus-circle-fill.svg">Agregar</a></li>
-                  <li><a class="dropdown-item ps-4" href="ventasUpdate.html"><img style="margin-right: 1rem;"
-                        src="assets\arrow-clockwise.svg">Modificar</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item ps-4" href="ventasDelete.html"><img style="margin-right: 1rem;"
-                        src="assets\trash3-fill.svg">Eliminar</a></li>
-                </ul>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false"><img style="margin-right: 1rem;" src="assets\cash-stack.svg">Abonos</a>
-                <ul class="dropdown-menu dropdown-menu">
-                  <li><a class="dropdown-item ps-4" href="abonoAdd.html"><img style="margin-right: 1rem;"
-                        src="assets\plus-circle-fill.svg">Agregar</a></li>
-                  <li><a class="dropdown-item ps-4" href="abonoUpdate.html"><img style="margin-right: 1rem;"
-                        src="assets\arrow-clockwise.svg">Modificar</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item ps-4" href="abonoDelete.html"><img style="margin-right: 1rem;"
-                        src="assets\trash3-fill.svg">Eliminar</a></li>
-                </ul>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false"><img style="margin-right: 1rem;" src="assets\people.svg">Clientes</a>
-                <ul class="dropdown-menu dropdown-menu">
-                  <li><a class="dropdown-item ps-4" href="clientesAdd.html"><img style="margin-right: 1rem;"
-                        src="assets\plus-circle-fill.svg">Agregar</a></li>
-                  <li><a class="dropdown-item ps-4" href="clientesUpdate.html"><img style="margin-right: 1rem;"
-                        src="assets\arrow-clockwise.svg">Modificar</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item ps-4" href="clientesDelete.html"><img style="margin-right: 1rem;"
-                        src="assets\trash3-fill.svg">Eliminar</a></li>
-                </ul>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false"><img style="margin-right: 1rem;" src="assets\bxs-report.svg">Reportes</a>
-                <ul class="dropdown-menu dropdown-menu">
-                  <li><a class="dropdown-item ps-4" href="ventasDia.html"><img style="margin-right: 1rem;"
-                        src="assets\arrow-right-short.svg">Ventas Diarias</a></li>
-                  <li><a class="dropdown-item ps-4" href="ventasMes.html"><img style="margin-right: 1rem;"
-                        src="assets\arrow-right-short.svg">Ventas Mensuales</a></li>
-                  <li><a class="dropdown-item ps-4" href="gananciasDiarias.html"><img style="margin-right: 1rem;"
-                        src="assets\arrow-right-short.svg">Ganancias Diarias</a></li>
-                  <li><a class="dropdown-item ps-4" href="gananciasMes.html"><img style="margin-right: 1rem;"
-                        src="assets\arrow-right-short.svg">Ganancias Mensuales</a></li>
-                </ul>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false"><img style="margin-right: 1rem;" src="assets\bxs-id-card.svg">Empleados</a>
-                <ul class="dropdown-menu dropdown-menu">
-                  <li><a class="dropdown-item ps-4" href="empleadoAdd.html"><img style="margin-right: 1rem;"
-                        src="assets\plus-circle-fill.svg">Agregar</a></li>
-                  <li><a class="dropdown-item ps-4" href="empleadoUpdate.html"><img style="margin-right: 1rem;"
-                        src="assets\arrow-clockwise.svg">Modificar</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item ps-4" href="empleadoDelete.html"><img style="margin-right: 1rem;"
-                        src="assets\trash3-fill.svg">Eliminar</a></li>
-                </ul>
-              </li>
-
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
-                  aria-expanded="false"><img style="margin-right: 1rem;" src="assets\journal-bookmark-fill.svg">Sistema
-                  de Apartado</a>
-                <ul class="dropdown-menu dropdown-menu">
-                  <li><a class="dropdown-item ps-4" href="reservaAdd.html"><img style="margin-right: 1rem;"
-                        src="assets\plus-circle-fill.svg">Agregar</a></li>
-                  <li><a class="dropdown-item ps-4" href="reservaUpdate.html"><img style="margin-right: 1rem;"
-                        src="assets\arrow-clockwise.svg">Modificar</a></li>
-                  <li>
-                    <hr class="dropdown-divider">
-                  </li>
-                  <li><a class="dropdown-item ps-4" href="reservaDelete.html"><img style="margin-right: 1rem;"
-                        src="assets\trash3-fill.svg">Eliminar</a></li>
-                </ul>
-              </li>
-              <li class="nav-item align-items-end flex-grow-1 pe-3">
-                <a class=" nav-link p-2" href="#"><img style="margin-right: 1rem;"
-                    src="assets\gear-fill.svg">Configuraciones</a>
-              </li>
-
-            </ul>
-          </div>
-        </div>
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasDarkNavbar"
+      aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas-header">
+        <img style="width: 18rem; height: 13rem;" src="img\Logotipo.png">
       </div>
-    </nav>
+
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link p-2" aria-current="page" href="index.html"><img style="margin-right: 1rem;"
+                src="assets/house-fill.svg">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link p-2" href="catalogo.html"><img style="margin-right: 1rem;"
+                src="assets\pencil-square.svg">Catálogo de Productos</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false"><img style="margin-right: 1rem;" src="assets\journal-text.svg">Inventario</a>
+            <ul class="dropdown-menu dropdown-menu">
+              <li><a class="dropdown-item ps-4" href="inventarioAdd.html"><img style="margin-right: 1rem;"
+                    src="assets\plus-circle-fill.svg">Agregar</a></li>
+              <li><a class="dropdown-item ps-4" href="inventarioUpdate.html"><img style="margin-right: 1rem;"
+                    src="assets\arrow-clockwise.svg">Modificar</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item ps-4" href="inventarioDelete.html"><img style="margin-right: 1rem;"
+                    src="assets\trash3-fill.svg">Eliminar</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false"><img style="margin-right: 1rem;" src="assets\cash-coin.svg">Ventas</a>
+            <ul class="dropdown-menu dropdown-menu">
+              <li><a class="dropdown-item ps-4" href="ventasAdd.html"><img style="margin-right: 1rem;"
+                    src="assets\plus-circle-fill.svg">Agregar</a></li>
+              <li><a class="dropdown-item ps-4" href="ventasUpdate.html"><img style="margin-right: 1rem;"
+                    src="assets\arrow-clockwise.svg">Modificar</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item ps-4" href="ventasDelete.html"><img style="margin-right: 1rem;"
+                    src="assets\trash3-fill.svg">Eliminar</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false"><img style="margin-right: 1rem;" src="assets\cash-stack.svg">Abonos</a>
+            <ul class="dropdown-menu dropdown-menu">
+              <li><a class="dropdown-item ps-4" href="abonoAdd.html"><img style="margin-right: 1rem;"
+                    src="assets\plus-circle-fill.svg">Agregar</a></li>
+              <li><a class="dropdown-item ps-4" href="abonoUpdate.html"><img style="margin-right: 1rem;"
+                    src="assets\arrow-clockwise.svg">Modificar</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item ps-4" href="abonoDelete.html"><img style="margin-right: 1rem;"
+                    src="assets\trash3-fill.svg">Eliminar</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false"><img style="margin-right: 1rem;" src="assets\people.svg">Clientes</a>
+            <ul class="dropdown-menu dropdown-menu">
+              <li><a class="dropdown-item ps-4" href="clientesAdd.html"><img style="margin-right: 1rem;"
+                    src="assets\plus-circle-fill.svg">Agregar</a></li>
+              <li><a class="dropdown-item ps-4" href="clientesUpdate.html"><img style="margin-right: 1rem;"
+                    src="assets\arrow-clockwise.svg">Modificar</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item ps-4" href="clientesDelete.html"><img style="margin-right: 1rem;"
+                    src="assets\trash3-fill.svg">Eliminar</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false"><img style="margin-right: 1rem;" src="assets\bxs-report.svg">Reportes</a>
+            <ul class="dropdown-menu dropdown-menu">
+              <li><a class="dropdown-item ps-4" href="ventasDia.html"><img style="margin-right: 1rem;"
+                    src="assets\bx-chevron-right.svg">Ventas Diarias</a></li>
+              <li><a class="dropdown-item ps-4" href="ventasMes.html"><img style="margin-right: 1rem;"
+                    src="assets\bx-chevron-right.svg">Ventas Mensuales</a></li>
+              <li><a class="dropdown-item ps-4" href="gananciasDiarias.html"><img style="margin-right: 1rem;"
+                    src="assets\bx-chevron-right.svg">Ganancias Diarias</a></li>
+              <li><a class="dropdown-item ps-4" href="gananciasMes.html"><img style="margin-right: 1rem;"
+                    src="assets\bx-chevron-right.svg">Ganancias Mensuales</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false"><img style="margin-right: 1rem;" src="assets\bxs-id-card.svg">Empleados</a>
+            <ul class="dropdown-menu dropdown-menu">
+              <li><a class="dropdown-item ps-4" href="empleadoAdd.html"><img style="margin-right: 1rem;"
+                    src="assets\plus-circle-fill.svg">Agregar</a></li>
+              <li><a class="dropdown-item ps-4" href="empleadoUpdate.html"><img style="margin-right: 1rem;"
+                    src="assets\arrow-clockwise.svg">Modificar</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item ps-4" href="empleadoDelete.html"><img style="margin-right: 1rem;"
+                    src="assets\trash3-fill.svg">Eliminar</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle p-2" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false"><img style="margin-right: 1rem;" src="assets\journal-bookmark-fill.svg">Sistema
+              de Apartado</a>
+            <ul class="dropdown-menu dropdown-menu">
+              <li><a class="dropdown-item ps-4" href="reservaAdd.html"><img style="margin-right: 1rem;"
+                    src="assets\plus-circle-fill.svg">Agregar</a></li>
+              <li><a class="dropdown-item ps-4" href="reservaUpdate.html"><img style="margin-right: 1rem;"
+                    src="assets\arrow-clockwise.svg">Modificar</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item ps-4" href="reservaDelete.html"><img style="margin-right: 1rem;"
+                    src="assets\trash3-fill.svg">Eliminar</a></li>
+            </ul>
+          </li>
+          <li class="nav-item align-items-end flex-grow-1 pe-3">
+            <a class=" nav-link p-2" href="#"><img style="margin-right: 1rem;"
+                src="assets\gear-fill.svg">Configuraciones</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </div>
+  </nav>
 
 
   <!-- Optional JavaScript -->
@@ -373,27 +380,5 @@
   <script src="JavaScript\dashboard.js"></script>
 
 </body>
-
-<div class="container">
-  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-    <p class="col-md-4 mb-0 text-muted">&copy; 2022 Company, Inc</p>
-
-    <a href="/"
-      class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-      <svg class="bi me-2" width="40" height="32">
-        <use xlink:href="#bootstrap" />
-      </svg>
-    </a>
-
-    <ul class="nav col-md-4 justify-content-end">
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Home</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Features</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Pricing</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
-    </ul>
-  </footer>
-</div>
-
 
 </html>
