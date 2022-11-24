@@ -10,7 +10,6 @@
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom styles for this template -->
@@ -18,6 +17,7 @@
 </head>
 
 <body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <header class="navbar navbar-dark bg-dark navbar-expand-lg bd-navbar sticky-top">
     <nav class="container-xxl bd-gutter flex-wrap flex-md-nowrap" aria-label="Main navigation">
@@ -213,7 +213,7 @@
 
       <main class="ms-sm-auto col-lg-9 px-md-4">
         <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-1 mb-2 border-bottom">          
-          <h2 class="py-3">Librería Pequeños Detalles</h2>
+          <h1 class="py-3">Librería y Variedades Pequeños Detalles</h1>
         </div>
 
         <div id="carouselExampleDark" class="px-5 carousel carousel-dark slide" data-bs-ride="carousel">
@@ -227,7 +227,7 @@
               <div class="p-2 text-center d-none d-md-block">
                 <h5>Ventas Diarias</h5>
               </div>              
-              <canvas id="myChart" class="d-block w-100"></canvas>
+              <canvas id="diaChart" class="d-block w-100"></canvas>
             </div>
             <div class="carousel-item" data-bs-interval="10000">
               <div class="p-2 text-center d-none d-md-block">
@@ -239,7 +239,7 @@
               <div class="p-2 text-center d-none d-md-block">
                 <h5>Ventas Mensuales</h5>
               </div>
-              <canvas id="barChart" class="d-block w-100"></canvas>              
+              <canvas id="mesChart" class="d-block w-100"></canvas>              
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
@@ -252,50 +252,62 @@
           </button>
         </div>
 
-        <h2 class="pt-5">Estadísticas del Día</h2>
+        <div class="py-4"></div>
+
+        <h2 class="px-5 py-3">Estadísticas de Hoy</h2>
         
-        <div class="row row-cols-1 row-cols-md-2 g-4 p-5">
+        <div class="row row-cols-1 row-cols-md-2 g-4 px-5">
           <div class="col">
             <div class="card border-dark">
-              <div class="card-header"><h5 class="pt-3 card-title">Total de Productos Vendidos</h5> </div>
-              <div class="card-body text-dark">
-                  
+              <div class="card-header"><h5 class="pt-3 card-title">Productos Vendidos</h5> </div>
+              <div class="card-body text-dark">                  
+                <canvas id="donaChart" class="d-block w-100"></canvas> 
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-dark">
+              <div class="card-header"><h5 class="pt-3 card-title">Cantidad de Productos Vendidos</h5> </div>
+              <div class="card-body text-dark">                  
                 <div class="counter" data-count="150">0</div>              
               </div>
             </div>
-
           </div>
           <div class="col">
-            <div class="card">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <div class="card border-dark">
+              <div class="card-header"><h5 class="pt-3 card-title">Venta Total</h5> </div>
+              <div class="card-body text-dark">                  
+                <div class="row row-col">
+                  <div class="col">
+                    <span class="counter">C$</span>
+                  </div>
+                  <div class="col">
+                    <div class="counter" data-count="1680">0</div>    
+                  </div>                  
+                </div>                          
               </div>
             </div>
           </div>
           <div class="col">
-            <div class="card">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card">
-              <img src="..." class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <div class="card border-dark">
+              <div class="card-header"><h5 class="pt-3 card-title">Ganancia</h5> </div>
+              <div class="card-body text-dark">                  
+                <div class="row row-col">
+                  <div class="col">
+                    <span class="counter">C$</span>
+                  </div>
+                  <div class="col">
+                    <div class="counter" data-count="586">0</div>    
+                  </div>                  
+                </div>                          
               </div>
             </div>
           </div>
         </div>
 
 
-      
+
+
       </main>
 
 
@@ -445,6 +457,12 @@
 
 
   <!-- Optional JavaScript -->
+  <!-- Remove the container if you want to extend the Footer to full width. -->
+  <!-- End of .container -->
+    <!-- MDB -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript" src="js/script.js"></script>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
@@ -454,6 +472,7 @@
   <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
     integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
     crossorigin="anonymous"></script>
+    <script src="JavaScript\javascript.js"></script>
   <script src="JavaScript\dashboard.js"></script>
 
 </body>

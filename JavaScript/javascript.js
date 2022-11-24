@@ -6,7 +6,7 @@ $('.counter').each(function() {
     countNum: countTo
   },
   {
-    duration: 5000,
+    duration: 1500,
     easing:'linear',
     step: function() {
       $this.text(Math.floor(this.countNum));
@@ -19,17 +19,5 @@ $('.counter').each(function() {
   });  
   
 });
-
-
-/* global bootstrap: false */
-(() => {
-    'use strict'
-    const tooltipTriggerList = Array.from(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    tooltipTriggerList.forEach(tooltipTriggerEl => {
-      new bootstrap.Tooltip(tooltipTriggerEl)
-    })
-  })()
-  
-
 
   
