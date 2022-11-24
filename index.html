@@ -212,21 +212,24 @@
       </nav>
 
       <main class="ms-sm-auto col-lg-9 px-md-4">
-        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-1 mb-2 border-bottom">          
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-1 mb-2 border-bottom">
           <h1 class="py-3">Librería y Variedades Pequeños Detalles</h1>
         </div>
 
         <div id="carouselExampleDark" class="px-5 carousel carousel-dark slide" data-bs-ride="carousel">
           <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="10000">
               <div class="p-2 text-center d-none d-md-block">
                 <h5>Ventas Diarias</h5>
-              </div>              
+              </div>
               <canvas id="diaChart" class="d-block w-100"></canvas>
             </div>
             <div class="carousel-item" data-bs-interval="10000">
@@ -239,14 +242,16 @@
               <div class="p-2 text-center d-none d-md-block">
                 <h5>Ventas Mensuales</h5>
               </div>
-              <canvas id="mesChart" class="d-block w-100"></canvas>              
+              <canvas id="mesChart" class="d-block w-100"></canvas>
             </div>
           </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+            data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Previous</span>
           </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+            data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="visually-hidden">Next</span>
           </button>
@@ -255,51 +260,59 @@
         <div class="py-4"></div>
 
         <h2 class="px-5 py-3">Estadísticas de Hoy</h2>
-        
+
         <div class="row row-cols-1 row-cols-md-2 g-4 px-5">
           <div class="col">
             <div class="card border-dark">
-              <div class="card-header"><h5 class="pt-3 card-title">Productos Vendidos</h5> </div>
-              <div class="card-body text-dark">                  
-                <canvas id="donaChart" class="d-block w-100"></canvas> 
+              <div class="card-header">
+                <h5 class="pt-3 card-title">Productos Vendidos</h5>
+              </div>
+              <div class="card-body text-dark">
+                <canvas id="donaChart" class="d-block w-100"></canvas>
               </div>
             </div>
           </div>
           <div class="col">
             <div class="card border-dark">
-              <div class="card-header"><h5 class="pt-3 card-title">Cantidad de Productos Vendidos</h5> </div>
-              <div class="card-body text-dark">                  
-                <div class="counter" data-count="150">0</div>              
+              <div class="card-header">
+                <h5 class="pt-3 card-title">Cantidad de Productos Vendidos</h5>
+              </div>
+              <div class="card-body text-dark">
+                <div class="counter" data-count="150">0</div>
               </div>
             </div>
           </div>
           <div class="col">
             <div class="card border-dark">
-              <div class="card-header"><h5 class="pt-3 card-title">Venta Total</h5> </div>
-              <div class="card-body text-dark">                  
+              <div class="card-header">
+                <h5 class="pt-3 card-title">Venta Total</h5>
+              </div>
+              <div class="card-body text-dark">
                 <div class="row row-col">
                   <div class="col">
                     <span class="counter">C$</span>
                   </div>
                   <div class="col">
-                    <div class="counter" data-count="1680">0</div>    
-                  </div>                  
-                </div>                          
+                    <div class="counter" data-count="1680">0</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
           <div class="col">
             <div class="card border-dark">
-              <div class="card-header"><h5 class="pt-3 card-title">Ganancia</h5> </div>
-              <div class="card-body text-dark">                  
+              <div class="card-header">
+                <h5 class="pt-3 card-title">Ganancia</h5>
+              </div>
+              <div class="card-body text-dark">
                 <div class="row row-col">
                   <div class="col">
                     <span class="counter">C$</span>
                   </div>
                   <div class="col">
-                    <div class="counter" data-count="586">0</div>    
-                  </div>                  
-                </div>                          
+                    <div class="counter" data-count="586">0</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -459,10 +472,10 @@
   <!-- Optional JavaScript -->
   <!-- Remove the container if you want to extend the Footer to full width. -->
   <!-- End of .container -->
-    <!-- MDB -->
-    <script type="text/javascript" src="js/mdb.min.js"></script>
-    <!-- Custom scripts -->
-    <script type="text/javascript" src="js/script.js"></script>
+  <!-- MDB -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript" src="js/script.js"></script>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
@@ -472,23 +485,24 @@
   <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
     integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
     crossorigin="anonymous"></script>
-    <script src="JavaScript\javascript.js"></script>
+  <script src="JavaScript\javascript.js"></script>
   <script src="JavaScript\dashboard.js"></script>
 
 </body>
 
-  <footer class="bg-light d-flex flex-wrap ms-sm-auto col-lg-9 justify-content-between align-items-center border-top pt-3 mt-5 pb-5 px-3">
-    <p class="col-lg-4 mb-0 text-muted">&copy; 2022 Librería Pequeños Detalles, Inc</p>
-  
-    <h5 class="text-center col-lg-4 mb-0 text-muted">Katherine DL</h5>
-  
-  
-    <ul class="nav col-lg-4 justify-content-end">
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Inicio</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
-      <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
-    </ul>
-  </footer>
+<footer
+  class="bg-light d-flex flex-wrap ms-sm-auto col-lg-9 justify-content-between align-items-center border-top pt-3 mt-5 pb-5 px-3">
+  <p class="col-lg-4 mb-0 text-muted">&copy; 2022 Librería Pequeños Detalles, Inc</p>
+
+  <h5 class="text-center col-lg-4 mb-0 text-muted">Katherine DL</h5>
+
+
+  <ul class="nav col-lg-4 justify-content-end">
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Inicio</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">FAQs</a></li>
+    <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
+  </ul>
+</footer>
 
 
 
