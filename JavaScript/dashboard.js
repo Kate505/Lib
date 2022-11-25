@@ -43,7 +43,7 @@ new Chart("mesChart", {
       label: 'Ganancias C$',
       type: 'line',
       fill:false,
-      data: [65, 59, 80, 81, 56, 55, 40,100,150,130,160,200],
+      data: [46, 40, 67, 68, 45, 43, 28, 85, 120, 98,115,175],
       lineTension: 0,
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',

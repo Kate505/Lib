@@ -216,54 +216,12 @@
           <h1 class="py-3">Librería y Variedades Pequeños Detalles</h1>
         </div>
 
-        <div id="carouselExampleDark" class="px-5 carousel carousel-dark slide" data-bs-ride="carousel">
-          <div class="carousel-indicators">
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
-              aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
-              aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
-              aria-label="Slide 3"></button>
-          </div>
-          <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="10000">
-              <div class="p-2 text-center d-none d-md-block">
-                <h5>Ventas Diarias</h5>
-              </div>
-              <canvas id="diaChart" class="d-block w-100"></canvas>
-            </div>
-            <div class="carousel-item" data-bs-interval="10000">
-              <div class="p-2 text-center d-none d-md-block">
-                <h5>Ventas Semanales</h5>
-              </div>
-              <canvas id="semChart" class="d-block w-100"></canvas>
-            </div>
-            <div class="carousel-item" data-bs-interval="10000">
-              <div class="p-2 text-center d-none d-md-block">
-                <h5>Ventas Mensuales</h5>
-              </div>
-              <canvas id="mesChart" class="d-block w-100"></canvas>
-            </div>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
-            data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
-            data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-        </div>
-
-        <div class="py-4"></div>
-
         <h2 class="px-5 py-3">Estadísticas de Hoy</h2>
 
+
         <div class="row row-cols-1 row-cols-md-2 g-4 px-5">
-          <div class="col">
-            <div class="card border-dark">
+          <div class="col-md-8">
+            <div class="card text-center border-dark h-100">
               <div class="card-header">
                 <h5 class="pt-3 card-title">Productos Vendidos</h5>
               </div>
@@ -272,18 +230,18 @@
               </div>
             </div>
           </div>
-          <div class="col">
-            <div class="card border-dark">
+          <div class="col-md-4">
+            <div class="card text-center border-dark h-100">
               <div class="card-header">
-                <h5 class="pt-3 card-title">Cantidad de Productos Vendidos</h5>
+                <h5 class="pt-3 card-title flex-fill">Cantidad de Productos Vendidos</h5>
               </div>
-              <div class="card-body text-dark">
-                <div class="counter" data-count="150">0</div>
+              <div class="card-body mt-lg-3 text-dark">
+                <div class="counter mt-lg-5 h-100" data-count="150">0</div>
               </div>
             </div>
           </div>
           <div class="col">
-            <div class="card border-dark">
+            <div class="card text-center border-dark h-100">
               <div class="card-header">
                 <h5 class="pt-3 card-title">Venta Total</h5>
               </div>
@@ -300,8 +258,8 @@
             </div>
           </div>
           <div class="col">
-            <div class="card border-dark">
-              <div class="card-header">
+            <div class="card border-dark h-100">
+              <div class="card-header text-center">
                 <h5 class="pt-3 card-title">Ganancia</h5>
               </div>
               <div class="card-body text-dark">
@@ -318,8 +276,48 @@
           </div>
         </div>
 
+        <div class="py-4"></div>
 
-
+        <div id="carouselExampleDark" class="px-5 carousel carousel-dark slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <div class="p-2 text-center d-none d-md-block">
+                <h5>Ventas y Ganancias Diarias</h5>
+              </div>
+              <canvas id="diaChart" class="d-block w-100"></canvas>
+            </div>
+            <div class="carousel-item" data-bs-interval="10000">
+              <div class="p-2 text-center d-none d-md-block">
+                <h5>Ventas y Ganancias Semanales</h5>
+              </div>
+              <canvas id="semChart" class="d-block w-100"></canvas>
+            </div>
+            <div class="carousel-item" data-bs-interval="10000">
+              <div class="p-2 text-center d-none d-md-block">
+                <h5>Ventas y Ganancias Mensuales</h5>
+              </div>
+              <canvas id="mesChart" class="d-block w-100"></canvas>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
 
       </main>
 
