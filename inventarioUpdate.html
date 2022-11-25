@@ -252,7 +252,7 @@
                         <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
                             data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <h3>Filtros</h3>
+                           
                                 <form class="row g-3">
                                     <div class="col-md-3">
                                         <label for="inputState" class="form-label">Categoría</label>
@@ -292,7 +292,7 @@
 
 
                                     <div class="pb-1 clearfix">
-                                        <button type="submit" class="btn btn-primary float-end">Aplicar</button>
+                                        <button type="submit" class="btn btn-primary float-end">Buscar</button>
                                         <button type="button"
                                             class="btn btn-outline-danger float-end me-5">Cancelar</button>
                                     </div>
@@ -368,6 +368,7 @@
                                                 <td>@datos</td>
                                                 <td>@datos</td>
                                                 <td>@datos</td>
+                                                <td>@datos</td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -415,14 +416,14 @@
                                         </select>
                                     </div>
                                     <div class="col-md-3">
-                                        <label  class="form-label">Precio Unitario de Compra</label>
+                                        <label  class="form-label">Precio Unitario Compra</label>
                                         <div class="input-group mb-2">
                                             <span class="input-group-text">C$</span>
                                             <input type="text" class="form-control" aria-label="Amount">
                                         </div>
                                     </div>
                                     <div class="col-md-3">
-                                        <label  class="form-label">Precio Unitario de Venta</label>
+                                        <label  class="form-label">Precio Unitario Venta</label>
                                         <div class="input-group mb-2">
                                             <span class="input-group-text">C$</span>
                                             <input type="text" class="form-control" aria-label="Amount">
@@ -433,9 +434,17 @@
                                         <label for="inputState" class="form-label">Fecha de Compra</label>
                                         <input type="date" class="form-control">
                                     </div>
+                                    
+                                    <div class="col-md-3">
+                                        <label for="inputState" class="form-label">Estado</label>
+                                        <select id="inputState" class="form-select">
+                                          <option selected>Activo</option>
+                                          <option>Inactivo</option>
+                                        </select>
+                                      </div>
 
                                     <div class="clearfix">
-                                        <button type="submit" class=" btn btn-primary float-end">Agregar</button>
+                                        <button type="submit" class=" btn btn-primary float-end">Modificar</button>
                                         <button type="button"
                                             class=" btn btn-outline-danger float-end me-5">Cancelar</button>
                                     </div>

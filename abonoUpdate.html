@@ -226,7 +226,7 @@
             <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
               data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                <h3>Filtros</h3>
+           
                 <form class="row g-3">
                   <div class="col-md-4">
                     <label for="" class="form-label">Nombres del Cliente</label>
@@ -247,7 +247,7 @@
                   </div>
 
                   <div class="clearfix">
-                    <button type="submit" class="btn btn-primary float-end">Aplicar</button>
+                    <button type="submit" class="btn btn-primary float-end">Buscar</button>
                     <button type="button" class="btn btn-outline-danger float-end me-5">Cancelar</button>
                   </div>
 
@@ -352,6 +352,14 @@
                   <div class="col-md-3">
                     <label for="inputState" class="form-label">Fecha</label>
                     <input type="date" class="form-control" >
+                  </div>
+
+                  <div class="col-md-3">
+                    <label for="inputState" class="form-label">Estado</label>
+                    <select id="inputState" class="form-select">
+                      <option selected>Activo</option>
+                      <option>Inactivo</option>
+                    </select>
                   </div>
 
                   <div class="clearfix">
