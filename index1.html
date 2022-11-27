@@ -13,10 +13,11 @@
 
   <link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom styles for this template -->
-  <link href="css\dashboard.css" rel="stylesheet">
+  <link rel="stylesheet" href="scss/custom.css">
 </head>
 
 <body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
   <header class="navbar navbar-dark bg-dark navbar-expand-lg bd-navbar sticky-top">
     <nav class="container-xxl bd-gutter flex-wrap flex-md-nowrap" aria-label="Main navigation">
@@ -211,389 +212,117 @@
       </nav>
 
       <main class="ms-sm-auto col-lg-9 px-md-4">
-        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-1 mb-4 border-bottom">
-          <h1 class="pb-1">Modificar Reservación de Producto</h1>
+        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-1 mb-2 border-bottom">
+          <h1 class="py-3">Librería y Variedades Pequeños Detalles</h1>
         </div>
 
-        <div class="accordion" id="accordionExample">
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingOne">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                aria-expanded="true" aria-controls="collapseOne">
-                <h3>Seleccione la reservación a modificar</h3>
-              </button>
-            </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
-              data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-           
-                <form class="row g-3">
-
-                  <div class="col-md-2">
-                    <label  class="form-label">Fecha</label>
-                    <input type="date" class="form-control">
-                  </div>
-
-                  <div class="col-md-2">
-                    <label for="" class="form-label">ID Reservación</label>
-                    <input type="" class="form-control" >
-                  </div>
+        <h2 class="px-5 py-3">Estadísticas de Hoy</h2>
 
 
-                  <div class="col-md-4">
-                    <label for="" class="form-label">Nombres del Cliente</label>
-                    <input type="" class="form-control" >
-                  </div>
-
-                  <div class="col-md-4">
-                    <label for="" class="form-label">Apellidos del Cliente</label>
-                    <input type="" class="form-control" >
-                  </div>
-
-                  <div class="clearfix">
-                    <button type="submit" class="btn btn-primary float-end">Buscar</button>
-                    <button type="button" class="btn btn-outline-danger float-end me-5">Cancelar</button>
-                  </div>
-                </form>
-
-                <div class="pb-3"></div>
-
-                <h4>Reservaciones</h4>
-
-                <table class="table table-hover">
-                  <thead>
-                    <tr>
-                      <th scope="col"></th>
-                      <th scope="col">ID</th>
-                      <th scope="col">Fecha</th>
-                      <th scope="col">Nombre del Cliente</th>
-                      <th scope="col">Apellidos del Cliente</th>
-                      <th scope="col">Sub-total</th>
-                      <th scope="col">Descuento</th>
-                      <th scope="col">Impuesto</th>
-                      <th scope="col">Deuda Total</th>
-                      <th scope="col">Cuota Inicial</th>
-                    </tr>
-                  </thead>
-                  <tbody class="table-group-divider">
-                    <tr>
-                      <th scope="col">
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        </div>
-                      </th>
-                      <th scope="row">1</th>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                    </tr>
-                    <tr>
-                      <th scope="col">
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        </div>
-                      </th>
-                      <th scope="row">2</th>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                      <td>@datos</td>
-
-                    </tr>
-                    <tr>
-                      <th scope="col">
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                        </div>
-                      </th>
-                      <th scope="row">3</th>
-                      <td>@datos</td>
-                      <td>@twitter</td>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                    </tr>
-                  </tbody>
-                </table>
-
-                <h4 class="py-2">Productos en la Reservación Seleccionada</h4>
-
-                <table class="table table-hover">
-                  <thead>
-                    <tr>
-                      <th scope="col">ID Reservación</th>
-                      <th scope="col">Cantidad</th>
-                      <th scope="col">ID Producto</th>
-                      <th scope="col">Precio Unitario</th>
-                      <th scope="col">Precio Total</th>
-                    </tr>
-                  </thead>
-                  <tbody class="table-group-divider">
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                      <td>@datos</td>
-
-                    </tr>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>@datos</td>
-                      <td>@twitter</td>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                    </tr>
-                  </tbody>
-                </table>
+        <div class="row row-cols-1 row-cols-md-2 g-4 px-5">
+          <div class="col-md-8">
+            <div class="card text-center border-dark h-100">
+              <div class="card-header">
+                <h5 class="pt-3 card-title">Productos Vendidos</h5>
+              </div>
+              <div class="card-body text-dark">
+                <canvas id="donaChart" class="d-block w-100"></canvas>
               </div>
             </div>
           </div>
-          <div class="accordion-item">
-            <h2 class="accordion-header" id="headingTwo">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                <h3>Modifique los detalles de la reservación</h3>
-              </button>
-            </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
-              data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                <h4 class="pb-4">Buscar y Seleccionar Productos</h4>
-                <form class="row g-3">
-                  <div class="col-md-2">
-                    <label for="inputState" class="form-label">Categoría</label>
-                    <select id="inputState" class="form-select">
-                      <option selected>Librería</option>
-                      <option>Variedades</option>
-                    </select>
-                  </div>
-                  <div class="col-md-4">
-                    <label for="" class="form-label">Nombre del Producto</label>
-                    <input type="" class="form-control" >
-                  </div>
-                  <div class="col-md-2">
-                    <label  class="form-label">Marca</label>
-                    <input type="text" class="form-control" >
-                  </div>
-                  <div class="col-md-2">
-                    <label for="inputState" class="form-label">Presentación</label>
-                    <select id="inputState" class="form-select">
-                      <option selected>Unidades</option>
-                      <option>Docenas</option>
-                      <option>Cajas</option>
-                      <option>Paquetes</option>
-                    </select>
-                  </div>
-
-                  <div class="col-md-12 text-md-end mt-4 justify-content-md-end">
-                    <button type="submit" class="btn btn-primary float-end">Buscar</button>
-                    <button type="button" class="btn btn-outline-danger float-end me-5">Cancelar</button>
-                  </div>
-
-                </form>
-
-                <div class="pb-3"></div>
-
-
-                <table class="table table-hover">
-                  <thead>
-                    <tr>
-                      <th scope="col"></th>
-                      <th scope="col">ID</th>
-                      <th scope="col">Categoría</th>
-                      <th scope="col">Unidades disponibles</th>
-                      <th scope="col">Presentación</th>
-                      <th scope="col">Producto</th>
-                      <th scope="col">Marca</th>
-                      <th scope="col">Precio</th>
-                    </tr>
-                  </thead>
-                  <tbody class="table-group-divider">
-                    <tr>
-                      <th scope="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      </th>
-                      <th scope="row">1</th>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                      <td>@mdo</td>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                    </tr>
-                    <tr>
-                      <th scope="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      </th>
-                      <th scope="row">2</th>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                      <td>@fat</td>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                    </tr>
-                    <tr>
-                      <th scope="col"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                      </th>
-                      <th scope="row">3</th>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                    </tr>
-                  </tbody>
-                </table>
-
-                <h3 class="py-4">Detalles de Reservación</h3>
-
-                <h4 class="p-2">Productos Reservados</h4>
-
-                <table class="table table-hover">
-                  <thead>
-                    <tr>
-                      <th scope="col">Cantidad</th>
-                      <th scope="col">ID</th>
-                      <th scope="col">Presentación</th>
-                      <th scope="col">Producto</th>
-                      <th scope="col">Marca</th>
-                      <th scope="col">Precio Unitario</th>
-                      <th scope="col">Precio Total</th>
-                    </tr>
-                  </thead>
-                  <tbody class="table-group-divider">
-                    <tr>
-                      <th scope="row" style="width: 5%; height: 5%;" class="mx-5"><input type="number"
-                          class="form-control form-control-sm"></th>
-                      <th scope="row">1</th>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                      <td>@mdo</td>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                    </tr>
-                    <tr>
-                      <th scope="row" style="width: 5%; height: 5%;" class="mx-5"><input type="number"
-                          class="form-control form-control-sm"></th>
-                      <th scope="row">2</th>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                      <td>@fat</td>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                    </tr>
-                    <tr>
-                      <th scope="row" style="width: 5%; height: 5%;" class="mx-5"><input type="number"
-                          class="form-control form-control-sm"></th>
-                      <th scope="row">3</th>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                      <td>@datos</td>
-                    </tr>
-                  </tbody>
-                </table>
-
-                <form class="py-3 row g-3">
-
-                  <div class="col-md-2">
-                    <label  class="form-label">Fecha</label>
-                    <input type="date" class="form-control">
-                  </div>
-
-                  <div class="col-md-4">
-                    <label for="" class="form-label">Nombres del Cliente</label>
-                    <input type="" class="form-control" >
-                  </div>
-
-                  <div class="col-md-4">
-                    <label for="" class="form-label">Apellidos del Cliente</label>
-                    <input type="" class="form-control" >
-                  </div>
-
-                  <div class="col-md-2">
-                    <label  class="form-label">Sub-total</label>
-                    <div class="input-group mb-2">
-                      <span class="input-group-text">C$</span>
-                      <input class="form-control" type="number" value="000.00" aria-label="Amount" readonly>
-                    </div>
-                  </div>
-
-                  <div class="col-md-3">
-                    <label  class="form-label">Descuento</label>
-                    <div class="input-group mb-2">
-                      <span class="input-group-text">C$</span>
-                      <input type="text" class="form-control" aria-label="Amount">
-                    </div>
-                  </div>
-
-                  <div class="col-md-3">
-                    <label  class="form-label">Impuesto</label>
-                    <div class="input-group mb-2">
-                      <span class="input-group-text">C$</span>
-                      <input type="text" class="form-control" aria-label="Amount">
-                    </div>
-                  </div>
-
-                  <div class="col-md-3">
-                    <label  class="form-label">Deuda Total</label>
-                    <div class="input-group mb-2">
-                      <span class="input-group-text">C$</span>
-                      <input class="form-control" type="number" value="000.00" aria-label="Amount" readonly>
-                    </div>
-                  </div>
-
-                  <div class="col-md-3">
-                    <label  class="form-label">Cuota Inicial</label>
-                    <div class="input-group mb-2">
-                      <span class="input-group-text">C$</span>
-                      <input class="form-control" type="number" value="000.00" aria-label="Amount">
-                    </div>
-                  </div>
-
-                  <div class="col-md-3">
-                    <label for="inputState" class="form-label">Estado</label>
-                    <select id="inputState" class="form-select">
-                      <option selected>Activo</option>
-                      <option>Inactivo</option>
-                    </select>
-                  </div>
-
-                  <div class="clearfix">
-                    <button type="submit" class="btn btn-primary float-end">Modificar</button>
-                    <button type="button" class="btn btn-outline-danger float-end me-5">Cancelar</button>
-                  </div>
-                </form>
-
+          <div class="col-md-4">
+            <div class="card text-center border-dark h-100">
+              <div class="card-header">
+                <h5 class="pt-3 card-title flex-fill">Cantidad de Productos Vendidos</h5>
+              </div>
+              <div class="card-body mt-lg-3 text-dark">
+                <div class="counter mt-lg-5 h-100" data-count="150">0</div>
               </div>
             </div>
           </div>
+          <div class="col">
+            <div class="card text-center border-dark h-100">
+              <div class="card-header">
+                <h5 class="pt-3 card-title">Venta Total</h5>
+              </div>
+              <div class="card-body text-dark">
+                <div class="row row-col">
+                  <div class="col">
+                    <span class="counter">C$</span>
+                  </div>
+                  <div class="col">
+                    <div class="counter" data-count="1680">0</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card border-dark h-100">
+              <div class="card-header text-center">
+                <h5 class="pt-3 card-title">Ganancia</h5>
+              </div>
+              <div class="card-body text-dark">
+                <div class="row row-col">
+                  <div class="col">
+                    <span class="counter">C$</span>
+                  </div>
+                  <div class="col">
+                    <div class="counter" data-count="586">0</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-          <div class="py-5"></div>
+        <div class="py-4"></div>
 
+        <div id="carouselExampleDark" class="px-5 carousel carousel-dark slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+              aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+              aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+              aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+              <div class="p-2 text-center d-none d-md-block">
+                <h5>Ventas y Ganancias Diarias</h5>
+              </div>
+              <canvas id="diaChart" class="d-block w-100"></canvas>
+            </div>
+            <div class="carousel-item" data-bs-interval="10000">
+              <div class="p-2 text-center d-none d-md-block">
+                <h5>Ventas y Ganancias Semanales</h5>
+              </div>
+              <canvas id="semChart" class="d-block w-100"></canvas>
+            </div>
+            <div class="carousel-item" data-bs-interval="10000">
+              <div class="p-2 text-center d-none d-md-block">
+                <h5>Ventas y Ganancias Mensuales</h5>
+              </div>
+              <canvas id="mesChart" class="d-block w-100"></canvas>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
 
       </main>
+
+
+
     </div>
   </div>
 
@@ -732,6 +461,11 @@
                 src="assets\gear-fill.svg">Configuraciones</a>
           </li>
 
+          <li class="nav-item align-items-end flex-grow-1 pe-3">
+            <a class=" nav-link p-2" href="index.html"><img style="margin-right: 1rem;"
+                src="assets\bx-exit.svg">Cerrar Sesión</a>
+          </li>
+
         </ul>
       </div>
     </div>
@@ -739,6 +473,12 @@
 
 
   <!-- Optional JavaScript -->
+  <!-- Remove the container if you want to extend the Footer to full width. -->
+  <!-- End of .container -->
+  <!-- MDB -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <!-- Custom scripts -->
+  <script type="text/javascript" src="js/script.js"></script>
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
@@ -748,18 +488,19 @@
   <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.28.0/dist/feather.min.js"
     integrity="sha384-uO3SXW5IuS1ZpFPKugNNWqTZRRglnUJK6UAZ/gxOX80nxEkN9NcGZTftn6RzhGWE"
     crossorigin="anonymous"></script>
+  <script src="JavaScript\javascript.js"></script>
   <script src="JavaScript\dashboard.js"></script>
 
 </body>
+
 <footer
   class="bg-light d-flex flex-wrap ms-sm-auto col-lg-9 justify-content-between align-items-center border-top pt-3 mt-5 pb-5 px-3">
-  <p class="col-lg-4 mb-0 text-muted">&copy; 2022 Librería Pequeños Detalles, Inc</p>
+  <p class="col-lg-4 mb-0 text-muted">&copy; 2022 Librería Pequeños Detalles, Inc</p>  
 
-    <ul class="nav col-lg-4 justify-content-center text-center">
+  <ul class="nav col-lg-4 justify-content-center text-center">
     <li class="nav-item text-center pe-4 border-end"><h5 >Katherine DL</h5></li>
     <li class="nav-item text-center ps-4 border-start"><h5 >Kevin MO</h5></li>    
   </ul>
-
 
   <ul class="nav col-lg-4 justify-content-end">
     <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">Inicio</a></li>
@@ -767,5 +508,8 @@
     <li class="nav-item"><a href="#" class="nav-link px-2 text-muted">About</a></li>
   </ul>
 </footer>
+
+
+
 
 </html>
